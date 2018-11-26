@@ -1,6 +1,7 @@
 \documentclass[t]{beamer}
 
 \usetheme[compress]{Dresden}
+%\usecolortheme{beaver}
 \usefonttheme{professionalfonts}
 % Insert the frame number at the bottom line
 \expandafter\def\expandafter\insertshorttitle\expandafter{%
@@ -11,7 +12,8 @@
 
 \usepackage{graphicx,color,dashbox,amsmath}
 \usepackage{hyperref}% embedding hyperlinks [must be loaded after dropping]
-\usepackage{amsmath,amsthm,amssymb,amsfonts,latexsym,mathrsfs,wasysym}
+\usepackage{amsmath}
+\usepackage{amsthm,amssymb,amsfonts,latexsym,mathrsfs,wasysym}
 \usepackage{pifont}
 \usepackage{marvosym}
 \usepackage{subfigure}
@@ -20,16 +22,17 @@
 \usepackage{threeparttable}% tables with footnotes
 \usepackage{dcolumn}% decimal-aligned tabular math columns
 \usepackage{float}
-
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\usepackage[style=ieee,backend=bibtex,citestyle=ieee]{biblatex}
 %\usepackage[multiple]{footmisc}
-
-\usepackage{colortbl}
+%\addbibresource{bibliography.bib}
+%\usepackage{colortbl}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{arrows.meta}
-
 
 %\usepackage{enumitem}
 %\newlist{arrowlist}{itemize}{1}
@@ -41,28 +44,22 @@
 \logo{\includegraphics[width=3em]{lapid-logo-45}}
 \renewcommand{\baselinestretch}{1.2}
 
-% Moshe commands and colors
-\newcommand{\fracds}[2]{\ensuremath{\frac{\displaystyle #1}{\displaystyle #2}}}
-\newcommand{\rrule}[1]{\rule[#1]{0pt}{0pt}}
-\newcommand{\pdf}[2]{\ensuremath{f_{#1}\!\left(#2\rrule{0.9em}\right)}}
-\newcommand{\pdfu}[3]{\ensuremath{f_{#1}^{#3}\!\left(#2\rrule{0.9em}\right)}}
-\newcommand{\bx}{\ensuremath{\bar{x}}}
-\newcommand{\bz}{\ensuremath{\bar{z}}}
-\newcommand{\tx}{\ensuremath{\tilde{x}}}
-\newcommand{\tX}{\ensuremath{\tilde{X}}}
-\newcommand{\tY}{\ensuremath{\tilde{Y}}}
-\newcommand{\tz}{\ensuremath{\tilde{z}}}
-\newcommand{\ns}{\normalsize}
-\newcommand{\smlp}{\mbox{\small $+$}}
-\newcommand{\smlm}{\mbox{\small $-$}}
-\newcommand{\ba}{\bar a}
-\newcommand{\bb}{\bar b}
-
-\newcommand{\sign}[1]{\mbox{\,sign}(#1)}
-\newcommand{\kkmo}{k|k-1}
-\newcommand{\kk}{{k|k}}
-\newcommand{\kpok}{{k+1|k}}
+% commands and colors
 \newcommand{\rR}{\mathbb{R}}
+\newcommand{\rsqr}{\mathbb{R}^2}
+\newcommand{\rthrd}{\mathbb{R}^3}
+\newcommand{\eqsn}[1]{\begin{equation}#1\end{equation}}
+\newcommand{\br}{$\\ $}
+
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\mat}[1]{\begin{matrix}#1\end{matrix}}
+\newcommand{\vmat}[1]{\begin{vmatrix}#1\end{vmatrix}}
+
+\newcommand{\con}{c\left(t\right)}
+\newcommand{\conp}[1]{c_{#1}\left(t\right)}
+\newcommand{\concov}{\mathtt{C}\left(\con\right)}
+\newcommand{\concovp}[1]{\mathtt{C}\left(\conp{#1}\right)}
+\newcommand{\conset}{\mathtt{G}}
 
 \makeatletter
 \newcommand{\mathleft}{\@fleqntrue\@mathmargin0pt}
@@ -82,12 +79,22 @@
 \definecolor{mg}{rgb}{0,0.4,0}%
 \definecolor{mypink2}{RGB}{219, 48, 122}
 
+\newtheorem*{Proposition}{Proposition}
+\newtheorem*{keylemma}{Key Lemma}
+\newtheorem*{Remark}{Remark}
+\newtheorem*{question}{Question}
+\newtheorem*{Task}{Task}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{thm}{Theorem}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{A Projected Lloyd’s Algorithm for Coverage Control Problems}
 
 \author
-{Yoav Palti \\ Supervisor: Associate Professor Daniel Zelazo}
+{Yoav Palti, Supervisor: Associate Professor Daniel Zelazo}
 
 \institute[]
 {Faculty of Aerospace Engineering, Technion, Haifa, Israel}
@@ -105,9 +112,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
-
 \begingroup
 % For the first slide only, remove all the text from the header/footer lines
 \renewcommand*\insertshorttitle{}
@@ -139,7 +144,7 @@
 \end{frame}
 
 \subsection[Motivation]{}
-\begin{frame}[label=sl1]{Motivation}
+\begin{frame}[label=motivation]{Motivation}
 \begin{itemize}
 \item<1-> Covering an area - (relatively) easy
 \item<2-> Covering an area with not sufficient amount of sensors - not so easy
@@ -151,12 +156,55 @@
 \end{frame}
 
 \subsection[Problem Formulation]{}
-\begin{frame}[label=sl1]{Problem Formulation}
+\begin{frame}[label=formulation]{Problem Formulation}
+\begin{itemize}
+\item There is some area $A \in \rR^{2}$ That we aim to cover
+\item We have set of sensors $S = \left\{s_1 \ldots s_n\right\}$ located in positions $p_i \in \mathbb{R}^2$ (for $i=1,\ldots,n$) at time $t$
+\begin{itemize}
+\item Each sensor has coverage radius $R$ (assuming all sensors are identical)
+\item Each sensor can cover a disk $D\left(p_{i}\left(t\right), R\right)\subset \rsqr$, centred at $p_{i} \left( t \right)$
+\end{itemize}
+\item Thus, the coverage: \begin{equation}
+D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{ x\in\rsqr \mid \lVert x - p_{i}\left(t\right) \leq \rVert_{2} R \}.
+\end{equation}
+\item We also assume $D_{i}\left(t\right) < A$
+\end{itemize}
+%\begin{block}{Sensor coverage} \begin{equation}
+%D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{x\in\rsqr \mid\norm{x - p_{i}\left(t\right)}_{2} \leq R\}.
+%\end{equation}
+%\end{block}
+\end{frame}
 
+\begin{frame}[label=formulation2]{Problem Formulation}
+Coverage Constraint:
+\begin{itemize}
+\item A given area inside the area $A_{m} \subset A$ must be covered always (e.g. ground station).
+\end{itemize}
+A \emph{configuration}: A configuration $c$ at time $t$ is the stack of the sensor positions at time $t$,
+\begin{equation}
+c\left(t\right) = \bmat{
+p_{1}^{T}\left(t\right)&\cdots&p_{n}^{T}\left(t\right)}^{T}\in\mathbb{R}^{2n}.
+\end{equation}
+\begin{alertblock}{Notice}
+Since $D_{i}\left( t \right) < A$, there is no one configuration that can cover the entire area $A$ at once
+\end{alertblock}
+\end{frame}
+
+\begin{frame}[label=formulation3]{Problem Formulation}
+Our goal is to find the set of configuration $\texttt{C}$ which contains configurations that all together provide full coverage of the area $A$, and yet maintains the coverage of $A_m$.
+
+\begin{problem} \label{GeneralProblem}
+Find the set $\texttt{C} = \bmat{
+c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide coverage at time $i$ to some area $A_c \left( t_i \right)$, such that:
+\begin{enumerate}
+\item after time $n$, each point of $A$ was visited at least once,
+\item At each time there was coverage to some area $A_sm \subset A_m$.
+\end{enumerate}
+\end{problem}
 \end{frame}
 
 \subsection[Literature Review]{}
-\begin{frame}[label=sl1]{Problem Formulation}
+\begin{frame}[label=sl1]{Literature Review}
 
 \end{frame}
 
@@ -171,17 +219,65 @@
 \end{frame}
 
 \subsection[Voronoi Partitioning]{}
-\begin{frame}[label=sl2]{Voronoi Partitioning}
-
+\begin{frame}[label=vorpart1]{Voronoi Partitioning}
+Let's start with a simple intuitive explanation...
+\begin{center}
+\includegraphics[scale=0.4]{Voronoi-example.png}
+\end{center}
 \end{frame}
 
-\subsection[Voronoi Partitioning]{}
-\begin{frame}[label=sl2]{Central Voronoi Tessellations}
-
+\begin{frame}[label=vorpart2]{Voronoi Partitioning}
+While being a method to partition an area with some cost function, the is a widely-used representation in the coverage problem \footnote{Cortes, J. and Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, Vol. 20, No. 2, 2004, p. 13, doi:10.1109/TRA.2004.824698} \footnote{Hussein, I. I. and Stipanovic, D. M., “Effective Coverage Control for Mobile Sensor Networks
+With Guaranteed Collision Avoidance,” IEEE Transactions on Control Systems
+Technology, Vol. 15, No. 4, 2007, pp. 642–657, doi:10.1109/TCST.2007.899155} \footnote{Du, Q., Faber, V., and Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
+and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676, doi:10.1137/
+S0036144599352836}.
 \end{frame}
 
-\subsection[Voronoi Partitioning]{}
-\begin{frame}[label=sl2]{Lloyd's Algorithm}
+\begin{frame}[label=vorpart3]{Voronoi Partitioning}
+The Voronoi Diagram of a region $\Omega \subset \rsqr$ is the set of partitions $\mathcal{V} = \left\{V_{i} \mid \cup V_{i} = \Omega\right\}$, generated by the generators $\mathcal{Z} = \{z_1,\ldots,z_n\mid z_{i} \in \Omega\}$, such that
+\begin{equation} \label{Voronoi Definition}
+V_{i} = \{q\in\Omega \mid \lVert q - z_i \rVert \leq \lVert q - z_j \rVert \forall z_i,z_j\in\mathcal{Z}\},
+\end{equation}
+where $V_{i}$ corresponds to the $i$-th element of $\mathcal{Z}$, and $\lVert \cdot \rVert$ denotes the Euclidean distance.
+\end{frame}
+
+\begin{frame}[label=centvorpart1]{Central Voronoi Tessellations}
+And yet again, let's have an intuitive explanation...
+\begin{center}
+\includegraphics[scale=0.5]{central-Voronoi-example.png}
+\end{center}
+\end{frame}
+
+\begin{frame}[label=centvorpart2]{Central Voronoi Tessellations}
+Let us define a density function, $\rho_i$, for each Voronoi partition $V_{i}$. Then, we can define the center of mass for each partition as
+\begin{equation}
+z_{i}^{*} = \frac{\int_{V_{i}}y\rho(y)dy}{\int_{V_{i}}\rho(y)dy}.
+\end{equation}
+If a generator $z_{i} = z_{i}^{*} \, \forall \,V_{i}$, we call this partitioning a \emph{centroidal Voronoi tessellation} (CVT).
+\end{frame}
+
+\begin{frame}[label=lloydsalg1]{Lloyd's Algorithm}
+Now that we know what Central Voronoi Tessellations are, we need to know how to calculate them. \\
+Stuart P. Lloyd, an Electrical Engineer, invented an algorithm that deals with PCM quantization \footnote{Lloyd, S., “Least squares quantization in PCM,” IEEE Transactions on Information Theory, Information Theory, IEEE Transactions on, IEEE Trans. Inform. Theory, Vol. 28, No. 2, 1982, pp. 129–137, doi:10.1109/TIT.1982.1056489}.
+\\
+It appears that the algorithm is very useful for calculating CVT's. Moreover, It is possible to build a controller based on this algorithm.
+\end{frame}
+
+\begin{frame}[label=lloydsalg2]{Lloyd's Algorithm}
+\begin{algorithm}[H]
+\caption{Lloyd's Algorithm}\label{LloydAlgo}
+\begin{algorithmic}[1]
+\State Calculate the Voronoi diagram for the current agents positions.
+\State Calculate the center of mass for every cell.
+\State Move the agents to the center of mass.
+\end{algorithmic}
+\end{algorithm}
+
+According to Cortes et al., if we define agent $i$ position as $p_i$ and the $i$'s partition centroid as $C_{V_{i}}$, then for some proportional constant $k_{prop}$, the controller can be defined as:
+\begin{equation} \label{LloydsContol}
+u_{i} = -k_{prop}\left( p_i - C_{V_{i}} \right)
+\end{equation} 
 
 \end{frame}
 
@@ -192,6 +288,8 @@
 
 \subsection[Projection Operator]{}
 \begin{frame}[label=sl2]{Projection Operator}
+
+The projection linear operator is defined as a linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
 
 \end{frame}
 
@@ -234,6 +332,5 @@
 \begin{frame}[label=sl3]{Some Simulation}
 
 \end{frame}
-
 
 \end{document}
