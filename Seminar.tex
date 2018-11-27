@@ -24,6 +24,8 @@
 \usepackage{float}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+%\usepackage{subfig}
+
 %\usepackage[style=ieee,backend=bibtex,citestyle=ieee]{biblatex}
 %\usepackage[multiple]{footmisc}
 %\addbibresource{bibliography.bib}
@@ -278,7 +280,7 @@ According to Cortes et al., if we define agent $i$ position as $p_i$ and the $i$
 \begin{equation} \label{LloydsContol}
 u_{i} = -k_{prop}\left( p_i - C_{V_{i}} \right)
 \end{equation} 
-
+Moreover, this controller is locally asymptotically stable.
 \end{frame}
 
 \subsection[Formation Control]{}
@@ -298,30 +300,115 @@ The projection linear operator is defined as a linear transformation $P$ from a 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section[Problem Solution]{Problem Solution}
-\subsection[Lloyd's Algorithm and Formation Control]{}
-\begin{frame}[label=sl3]{Lloyd's Algorithm and Formation Control}
-
-\end{frame}
-
-\subsection[Lloyd's Algorithm and Formation Control]{}
-\begin{frame}[label=sl3]{Proof}
-
-\end{frame}
 
 \subsection[Projected Lloyd's Algorithm]{}
-\begin{frame}[label=sl3]{Projected Lloyd's Algorithm}
+\begin{frame}[label=projlloydsalgo1]{Projected Lloyd's Algorithm}
+We should supply a solution for the "Coverage Constraint" \pause
+\begin{block}{Reminder}
+A given area inside the area $A_{m} \subset A$ must be covered always
+\end{block}\pause
+We came up with a rather simple solution for this problem.
+\end{frame}
+
+\begin{frame}[label=projlloydsalgo2]{Projected Lloyd's Algorithm}
+\begin{algorithm}[H]
+\caption{Projected Lloyd's Algorithm (PLA)}\label{ProjLloydsAlgorithm}
+\begin{algorithmic}[1]
+\State Calculate the Voronoi diagram for the current agents positions.
+\State Calculate the center of mass for every cell.
+\State Project the center of mass of every cell to the area constraint limiting polygon.
+\State Move the agents the projected center of mass.
+\State Repeat until converge.
+\end{algorithmic}
+\end{algorithm}
+
+Writing this algorithm as a controller:
+\begin{equation} \label{ProjectedLloydsContol}
+u_{i} = -k_{prop}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
+\end{equation} 
+\end{frame}
+
+\begin{frame}[label=projlloydsalgo3]{Projected Lloyd's Algorithm}
+In the following example:
+\begin{itemize}
+\item Left - regular CVT, build with the original Lloyd's Algorithm.
+\item Right - A partitioning built with the PLA.
+\end{itemize}
+\begin{figure}
+\centering
+\begin{minipage}{.4\textwidth}
+  \centering
+  \includegraphics[scale=0.3]{proj-lloyds-off.png}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+  \centering
+  \includegraphics[scale=0.3]{proj-lloyds-on.png}
+\end{minipage}
+\end{figure}
 
 \end{frame}
 
-\subsection[Projected Lloyd's Algorithm]{}
-\begin{frame}[label=sl3]{Proof}
+\begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
+\begin{theorem}
+The projected Lloyd's Algorithm is locally asymptotically stable
+\end{theorem}
+
+As the projection is a linear operator, the controller is also locally asymptotically stable, and the proof is virtually the same as was given by Cortes et al. The proof is based on a proposal of Lyaponov function, and then using the direct Lyaponov method to prove the stability
+\end{frame}
+
+\begin{frame}[label=projlloydsalgoproof]{Proof of stability}
+As the projection is a linear operator, the controller is also locally asymptotically stable, and the proof is virtually the same as was given by Cortes et al.\\
 
 \end{frame}
 
 \subsection[Problem Solution Algorithm]{}
-\begin{frame}[label=sl3]{Problem Solution Algorithm}
+\begin{frame}[label=probsolalg1]{Problem Solution Algorithm}
+So far, we've given solution for:
+\begin{itemize}
+\item Covering a given area using Voronoi partitioning
+\item Partition and area such that the coverage constraint is fulfilled.
+\end{itemize}
 
+Therefore, we are ready for the problem solution algorithm...
 \end{frame}
+
+\begin{frame}[label=probsolalg2]{Problem Solution Algorithm}
+\begin{algorithm}[H]
+\caption{Problem Solution Algorithm}\label{GeneralProbSolution}
+\begin{algorithmic}[1]
+\State Using some random initial guess, partition the whole area using PLA.
+\State For each partition (assuming that the agents can actually cover each partition with their coverage radius), calculate the CVT. The initial positions for the CVT calculation is the previous partition CVT.
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\subsection[Lloyd's Algorithm and Formation Control]{}
+\begin{frame}[label=lloydsandformation1]{Lloyd's Algorithm and Formation Control}
+\begin{itemize}
+\item<1-> Problem solved.
+\item<2-> Make it more interesting...
+\item<3-> Combine Lloyd's Algorithm with distance-based formation control! \begin{itemize}
+\item<4-> create and maintain spatial properties partially or fully (We do not provide a condition where this combination meets the requirements).
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
+As both of the controllers are convex, we propose to simply combine them with some coefficient:\\
+TODO: INSERT THE CONTROLLER (already written in the "Deployment and Formation controller" document)
+\pause
+\begin{theorem}
+The combined controller is Locally Asymptotically Stable
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=lloydsandformation3]{Lloyd's Algorithm and Formation Control}
+\begin{proof}
+TODO (already written in the "Deployment and Formation controller" document)
+\end{proof}
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% Simulations %%%%%%%%%%%
@@ -330,7 +417,13 @@ The projection linear operator is defined as a linear transformation $P$ from a 
 \section[Simulations]{Simulations}
 \subsection[Some Simulation]{}
 \begin{frame}[label=sl3]{Some Simulation}
-
+List of simulations to create:
+\begin{itemize}
+\item 3 agents, 5 big partitions, no formation, no PLA
+\item 3 agents, 5 big partitions, no formation, PLA
+\item 10 agents, 5 big partitions, no formation, PLA
+\item 6 agents, 5 big partitions, some formation, PLA
+\end{itemize}
 \end{frame}
 
 \end{document}
