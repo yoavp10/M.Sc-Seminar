@@ -63,6 +63,12 @@
 \newcommand{\concovp}[1]{\mathtt{C}\left(\conp{#1}\right)}
 \newcommand{\conset}{\mathtt{G}}
 
+\newcommand{\sigp}{\sigma\left(p\right)}
+\newcommand{\sigpp}[2]{\sigma_{#1 #2}\left(p \right)}
+\newcommand{\pb}{\bar{p}}
+
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
 \makeatletter
 \newcommand{\mathleft}{\@fleqntrue\@mathmargin0pt}
 \newcommand{\mathcenter}{\@fleqnfalse}
@@ -136,14 +142,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section[Introduction]{Introduction}
-\subsection[About Me]{}
-\begin{frame}[label=abtme]{About Me}
-\begin{itemize}
-\item Yoav Palti, B.Sc in Aerospace Engineering, Technion, 2012
-\item Aeronautical algorithms engineer, IAF, since 2013
-\item M.Sc student since 2014
-\end{itemize}
-\end{frame}
+%\subsection[About Me]{}
+%\begin{frame}[label=abtme]{About Me}
+%\begin{itemize}
+%\item Yoav Palti, B.Sc in Aerospace Engineering, Technion, 2012
+%\item Aeronautical algorithms engineer, IAF, since 2013
+%\item M.Sc student since 2014
+%\end{itemize}
+%\end{frame}
 
 \subsection[Motivation]{}
 \begin{frame}[label=motivation]{Motivation}
@@ -206,8 +212,36 @@ c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide co
 \end{frame}
 
 \subsection[Literature Review]{}
-\begin{frame}[label=sl1]{Literature Review}
+\begin{frame}[label=litrev1]{Literature Review}
+\begin{itemize}
+\item<1-> Covering an area$^{1,2,3}$: \begin{itemize}
+\item<2-> Photographing
+\item<2-> Tracking
+\item<2-> iRobot...
+\end{itemize}
+\item<3-> \textit{Coverage Control}$^{4}$
+\end{itemize}
 
+\footnote[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
+\footnote[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
+\footnote[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
+\footnote[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
+\end{frame}
+
+\begin{frame}[label=litrev2]{Literature Review}
+\begin{itemize}
+\item<1-> Widely used concept - set of trajectories$^{1,2,3}$
+\item<2-> Another concept - \textit{Voronoi Partitioning}
+\end{itemize}
+\pause
+According to [Cortes2004]$^{4}$, Achieving coverage is possible using Partitioning to achieve full coverage.
+
+
+\footnote[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468. https://doi.org/10.1109/CDC.2013.6760414}
+\footnote[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
+\footnote[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
+and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676}.
+\footnote[4]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, …, 20(2), 13.}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -216,8 +250,24 @@ c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide co
 
 \section[Mathematical Background]{Mathematical Background}
 \subsection[Lyaponov Stability]{}
-\begin{frame}[label=sl2]{Lyaponov Stability}
+\begin{frame}[label=lyapunovstability1]{Lyapunov Stability}
+\begin{itemize}
+\item<1-> - Lyapunov stable - if we are neat the equilibrium poing $x_eq$, then the controller will stay near $x_eq$ forever.
+\item<2-> - Asymptotically stable - Lyapunov stable + converge to $x_eq$.
+\end{itemize}
+\end{frame}
 
+\begin{frame}[label=lyapunovstability2]{Lyapunov Stability}
+How to prove Lyapunov stable and asymptotically stable? Using Lyapunov direct method!
+\begin{enumerate}
+\item<1-> Define a \textit{Candidate Lyapunov Function} $V(x):\mathbb{R}^{n}\rightarrow\mathbb{R}$
+\item<2-> To show that we're Lyapunov stable, make sure that: \label{direct lyapunov method conditions}\begin{enumerate}
+\item $V(0) = 0$
+\item $V(\zeta)>0 \Leftrightarrow \zeta \neq 0$
+\item $\dot{V(\zeta)} \leq 0 \Leftrightarrow \zeta \neq 0 $ \label{lyapunov asymptotical stability condition}
+\end{enumerate}
+\item<3-> To show that we are asymptotically stable, show that condition \ref{direct lyapunov method conditions}.\ref{lyapunov asymptotical stability condition} is: $\dot{V(\zeta)} < 0 \Leftrightarrow \zeta \neq 0 $
+\end{enumerate}
 \end{frame}
 
 \subsection[Voronoi Partitioning]{}
@@ -229,14 +279,8 @@ Let's start with a simple intuitive explanation...
 \end{frame}
 
 \begin{frame}[label=vorpart2]{Voronoi Partitioning}
-While being a method to partition an area with some cost function, the is a widely-used representation in the coverage problem \footnote{Cortes, J. and Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, Vol. 20, No. 2, 2004, p. 13, doi:10.1109/TRA.2004.824698} \footnote{Hussein, I. I. and Stipanovic, D. M., “Effective Coverage Control for Mobile Sensor Networks
-With Guaranteed Collision Avoidance,” IEEE Transactions on Control Systems
-Technology, Vol. 15, No. 4, 2007, pp. 642–657, doi:10.1109/TCST.2007.899155} \footnote{Du, Q., Faber, V., and Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
-and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676, doi:10.1137/
-S0036144599352836}.
-\end{frame}
-
-\begin{frame}[label=vorpart3]{Voronoi Partitioning}
+While being a method to partition an area with some cost function, the is a widely-used representation in the coverage problem ([Cortes2004][Hussein2007][Du1999])
+\\
 The Voronoi Diagram of a region $\Omega \subset \rsqr$ is the set of partitions $\mathcal{V} = \left\{V_{i} \mid \cup V_{i} = \Omega\right\}$, generated by the generators $\mathcal{Z} = \{z_1,\ldots,z_n\mid z_{i} \in \Omega\}$, such that
 \begin{equation} \label{Voronoi Definition}
 V_{i} = \{q\in\Omega \mid \lVert q - z_i \rVert \leq \lVert q - z_j \rVert \forall z_i,z_j\in\mathcal{Z}\},
@@ -275,21 +319,37 @@ It appears that the algorithm is very useful for calculating CVT's. Moreover, It
 \State Move the agents to the center of mass.
 \end{algorithmic}
 \end{algorithm}
+\end{frame}
 
+\begin{frame}[label=lloydsalg3]{Lloyd's Algorithm}
 According to Cortes et al., if we define agent $i$ position as $p_i$ and the $i$'s partition centroid as $C_{V_{i}}$, then for some proportional constant $k_{prop}$, the controller can be defined as:
-\begin{equation} \label{LloydsContol}
-u_{i} = -k_{prop}\left( p_i - C_{V_{i}} \right)
+\begin{equation} \label{Lloyds contoller}
+u_{i} = -k_{p}\left( p_i - C_{V_{i}} \right)
 \end{equation} 
 Moreover, this controller is locally asymptotically stable.
 \end{frame}
 
-\subsection[Formation Control]{}
-\begin{frame}[label=sl2]{Formation Control}
+\subsection[Distance-Based Formation Control]{}
+\begin{frame}[label=distanceformation1]{Formation Control}
+For a complete background, some prior knowledge on algebraic graph theory is needed. Let's simplify:
+\begin{itemize}
+\item<1-> We have agents $1 \ldots n$ on positions $p_{i}$
+\item<2-> We want that the distance between agents $i,j (i \neq j)$ will be $d_{ij}$
+\item<3-> Lets assume that there isn't connection between all the agents. Only $\varepsilon$ agents can share information.
+\end{itemize}
+\end{frame}
 
+\begin{frame}[label=distanceformation2]{Formation Control}
+Then, for a single agent $p_i$, the controller will have the following form:
+\begin{equation}
+    \dot{p_{f_{i}}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
+    \label{formation controller}
+\end{equation}
+This controller is locally asymptotically stable.
 \end{frame}
 
 \subsection[Projection Operator]{}
-\begin{frame}[label=sl2]{Projection Operator}
+\begin{frame}[label=projoperator]{Projection Operator}
 
 The projection linear operator is defined as a linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
 
@@ -324,7 +384,7 @@ We came up with a rather simple solution for this problem.
 
 Writing this algorithm as a controller:
 \begin{equation} \label{ProjectedLloydsContol}
-u_{i} = -k_{prop}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
+u_{i} = -k_{p}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
 \end{equation} 
 \end{frame}
 
@@ -395,17 +455,24 @@ Therefore, we are ready for the problem solution algorithm...
 
 \begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
 As both of the controllers are convex, we propose to simply combine them with some coefficient:\\
-TODO: INSERT THE CONTROLLER (already written in the "Deployment and Formation controller" document)
-\pause
+\begin{equation}
+    u_{i} = \alpha \left(-k_{p}\left( p_i -C_{V_{i}} \right)\right) +
+    \left( 1-\alpha \right)\left[-\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)  \right] 
+    \label{Combined Controller}
+\end{equation}\pause
 \begin{theorem}
 The combined controller is Locally Asymptotically Stable
 \end{theorem}
 \end{frame}
 
 \begin{frame}[label=lloydsandformation3]{Lloyd's Algorithm and Formation Control}
-\begin{proof}
-TODO (already written in the "Deployment and Formation controller" document)
-\end{proof}
+How to prove:
+\begin{itemize}
+\item Pretty long and technical, based on Lyapunov function.
+\item We know the Lyapunov function of each controller - Let's combine!
+\item After long calculations, we can show using the Lyapunov direct method that this controller is locally asymptotically stable.
+\item In the same way, we can show it works with the PLA.
+\end{itemize}
 \end{frame}
 
 
