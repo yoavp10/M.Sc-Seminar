@@ -152,15 +152,29 @@
 %\end{frame}
 
 \subsection[Motivation]{}
-\begin{frame}[label=motivation]{Motivation}
-\begin{itemize}
-\item<1-> Covering an area - (relatively) easy
-\item<2-> Covering an area with not sufficient amount of sensors - not so easy
+\begin{frame}[label=motivation1]{Motivation}
+Covering an area - (relatively) easy
+\begin{center}
+\includegraphics[scale=0.4]{motivation-figures-no-issue.png}
+\end{center}
+\end{frame}
+
+\begin{frame}[label=motivation2]{Motivation}
+Covering an area with not sufficient amount of sensors - not so easy
 \begin{itemize}
 \item \textit{Requires better definition of behaviour}
+\begin{center}
+\includegraphics[scale=0.4]{motivation-figures-not-enough.png}
+\end{center}
 \end{itemize}
-\item<3-> Maintain contact with home base (at least in steady state) - hard
-\end{itemize}
+
+\end{frame}
+
+\begin{frame}[label=motivation3]{Motivation}
+Maintain contact with home base (at least in steady state) - hard
+\begin{center}
+\includegraphics[scale=0.4]{motivation-figures-constraint.png}
+\end{center}
 \end{frame}
 
 \subsection[Problem Formulation]{}
@@ -173,7 +187,7 @@
 \item Each sensor can cover a disk $D\left(p_{i}\left(t\right), R\right)\subset \rsqr$, centred at $p_{i} \left( t \right)$
 \end{itemize}
 \item Thus, the coverage: \begin{equation}
-D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{ x\in\rsqr \mid \lVert x - p_{i}\left(t\right) \leq \rVert_{2} R \}.
+D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{ x\in\rsqr \mid \lVert x - p_{i}\left(t\right) \rVert_{2} \leq R \}.
 \end{equation}
 \item We also assume $D_{i}\left(t\right) < A$
 \end{itemize}
@@ -222,10 +236,11 @@ c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide co
 \item<3-> \textit{Coverage Control}$^{4}$
 \end{itemize}
 
-\footnote[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
-\footnote[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
-\footnote[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
-\footnote[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
+
+\footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
+\footnotetext[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
+\footnotetext[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
+\footnotetext[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
 \end{frame}
 
 \begin{frame}[label=litrev2]{Literature Review}
@@ -234,14 +249,13 @@ c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide co
 \item<2-> Another concept - \textit{Voronoi Partitioning}
 \end{itemize}
 \pause
-According to [Cortes2004]$^{4}$, Achieving coverage is possible using Partitioning to achieve full coverage.
+According to [Cortes2004]$^{4}$, It is possible to use partitioning for full coverage.
 
-
-\footnote[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468. https://doi.org/10.1109/CDC.2013.6760414}
-\footnote[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
-\footnote[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
-and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676}.
-\footnote[4]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, …, 20(2), 13.}
+\footnotetext[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468. https://doi.org/10.1109/CDC.2013.6760414}
+\footnotetext[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
+\footnotetext[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
+and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676}
+\footnotetext[4]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, …, 20(2), 13.}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,8 +266,8 @@ and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676}.
 \subsection[Lyaponov Stability]{}
 \begin{frame}[label=lyapunovstability1]{Lyapunov Stability}
 \begin{itemize}
-\item<1-> - Lyapunov stable - if we are neat the equilibrium poing $x_eq$, then the controller will stay near $x_eq$ forever.
-\item<2-> - Asymptotically stable - Lyapunov stable + converge to $x_eq$.
+\item<1-> Lyapunov stable - if we are neat the equilibrium poing $x_eq$, then the controller will stay near $x_eq$ forever.
+\item<2-> Asymptotically stable - Lyapunov stable + converge to $x_eq$.
 \end{itemize}
 \end{frame}
 
@@ -279,7 +293,7 @@ Let's start with a simple intuitive explanation...
 \end{frame}
 
 \begin{frame}[label=vorpart2]{Voronoi Partitioning}
-While being a method to partition an area with some cost function, the is a widely-used representation in the coverage problem ([Cortes2004][Hussein2007][Du1999])
+While being a method to partition an area with some cost function, the is a widely-used representation in the coverage problem ([Cortes2004][Hussein2007][Du1999]).
 \\
 The Voronoi Diagram of a region $\Omega \subset \rsqr$ is the set of partitions $\mathcal{V} = \left\{V_{i} \mid \cup V_{i} = \Omega\right\}$, generated by the generators $\mathcal{Z} = \{z_1,\ldots,z_n\mid z_{i} \in \Omega\}$, such that
 \begin{equation} \label{Voronoi Definition}
@@ -303,16 +317,16 @@ z_{i}^{*} = \frac{\int_{V_{i}}y\rho(y)dy}{\int_{V_{i}}\rho(y)dy}.
 If a generator $z_{i} = z_{i}^{*} \, \forall \,V_{i}$, we call this partitioning a \emph{centroidal Voronoi tessellation} (CVT).
 \end{frame}
 
-\begin{frame}[label=lloydsalg1]{Lloyd's Algorithm}
-Now that we know what Central Voronoi Tessellations are, we need to know how to calculate them. \\
-Stuart P. Lloyd, an Electrical Engineer, invented an algorithm that deals with PCM quantization \footnote{Lloyd, S., “Least squares quantization in PCM,” IEEE Transactions on Information Theory, Information Theory, IEEE Transactions on, IEEE Trans. Inform. Theory, Vol. 28, No. 2, 1982, pp. 129–137, doi:10.1109/TIT.1982.1056489}.
-\\
-It appears that the algorithm is very useful for calculating CVT's. Moreover, It is possible to build a controller based on this algorithm.
-\end{frame}
+%\begin{frame}[label=lloydsalg1]{Lloyd's Algorithm}
+%Now that we know what Central Voronoi Tessellations are, we need to know how to calculate them. \\
+%Stuart P. Lloyd, an Electrical Engineer, invented an algorithm that deals with PCM quantization \footnote{Lloyd, S., “Least squares quantization in PCM,” IEEE Transactions on Information Theory, Information Theory, IEEE Transactions on, IEEE Trans. Inform. Theory, Vol. 28, No. 2, 1982, pp. 129–137, doi:10.1109/TIT.1982.1056489}.
+%\\
+%It appears that the algorithm is very useful for calculating CVT's. Moreover, It is possible to build a controller based on this algorithm.
+%\end{frame}
 
 \begin{frame}[label=lloydsalg2]{Lloyd's Algorithm}
 \begin{algorithm}[H]
-\caption{Lloyd's Algorithm}\label{LloydAlgo}
+\caption{Lloyd's Algorithm \footnote{Lloyd, S., “Least squares quantization in PCM,” IEEE Transactions on Information Theory, Information Theory, IEEE Transactions on, IEEE Trans. Inform. Theory, Vol. 28, No. 2, 1982, pp. 129–137, doi:10.1109/TIT.1982.1056489}.}\label{LloydAlgo}
 \begin{algorithmic}[1]
 \State Calculate the Voronoi diagram for the current agents positions.
 \State Calculate the center of mass for every cell.
@@ -322,11 +336,17 @@ It appears that the algorithm is very useful for calculating CVT's. Moreover, It
 \end{frame}
 
 \begin{frame}[label=lloydsalg3]{Lloyd's Algorithm}
-According to Cortes et al., if we define agent $i$ position as $p_i$ and the $i$'s partition centroid as $C_{V_{i}}$, then for some proportional constant $k_{prop}$, the controller can be defined as:
+According to [Cortes2004], if we define agent $i$ position as $p_i$ and the $i$'s partition centroid as $C_{V_{i}}$, then for some proportional constant $k_{prop}$, the controller can be defined as:
 \begin{equation} \label{Lloyds contoller}
 u_{i} = -k_{p}\left( p_i - C_{V_{i}} \right)
 \end{equation} 
 Moreover, this controller is locally asymptotically stable.
+
+\begin{figure}[b]
+\centering
+\includegraphics[scale=0.3]{Lloyds-alg-from-cortes.png}
+\caption{A simulation from [Cortes2004] with 32 agents}
+\end{figure}
 \end{frame}
 
 \subsection[Distance-Based Formation Control]{}
