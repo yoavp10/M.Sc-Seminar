@@ -353,16 +353,23 @@ Moreover, this controller is locally asymptotically stable.
 \begin{frame}[label=distanceformation1]{Formation Control}
 For a complete background, some prior knowledge on algebraic graph theory is needed. Let's simplify:
 \begin{itemize}
-\item<1-> We have agents $1 \ldots n$ on positions $p_{i}$
-\item<2-> We want that the distance between agents $i,j (i \neq j)$ will be $d_{ij}$
-\item<3-> Lets assume that there isn't connection between all the agents. Only $\varepsilon$ agents can share information.
+\item We have agents $1 \ldots n$ on positions $p_{i}$ \pause
+\item Goal - agents $i,j (i \neq j)$ will be at distance $d_{ij}$ \pause
+\item Only $\varepsilon$ agents can share information.
 \end{itemize}
 \end{frame}
 
 \begin{frame}[label=distanceformation2]{Formation Control}
-Then, for a single agent $p_i$, the controller will have the following form:
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=0.42]{graph-example.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=distanceformation3]{Formation Control}
+For a single agent $p_i$, the controller will have the following form:
 \begin{equation}
-    \dot{p_{f_{i}}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
+    \dot{p_{i}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
     \label{formation controller}
 \end{equation}
 This controller is locally asymptotically stable.
