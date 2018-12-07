@@ -290,49 +290,49 @@ Cortes et al.$^1$ provided a controller that know how to partition an area and p
 
 %%% Problem Formulation %%%
 \subsection[Problem Formulation]{}
-\begin{frame}[label=formulation]{Problem Formulation}
+\begin{frame}[label=probformulation1]{Problem Formulation}
 \begin{itemize}
-\item There is some area $A \in \rR^{2}$ That we aim to cover
-\item We have set of sensors $S = \left\{s_1 \ldots s_n\right\}$ located in positions $p_i \in \mathbb{R}^2$ (for $i=1,\ldots,n$) at time $t$
+\item There is some area $A \in \rR^{2}$ That we aim to cover.
+\item A sub-area $A_{m} \subset A$ must be covered always (e.g. ground station).
+\item There exist a set of \textbf{mobile} sensors $S = \left\{s_1 \ldots s_n\right\}$ located in positions $p_i(t) \in \mathbb{R}^2$ (for $i=1,\ldots,n$) at time $t$.
 \begin{itemize}
-\item Each sensor has coverage radius $R$ (assuming all sensors are identical)
-\item Each sensor can cover a disk $D\left(p_{i}\left(t\right), R\right)\subset \rsqr$, centred at $p_{i} \left( t \right)$
+\item The sensors can be controller with integrator dynamics $\dot{p_i}(t) = u$.
+\item Each sensor can cover an area defined as $Cover\left( p_i, t \right)$.
 \end{itemize}
-\item Thus, the coverage: \begin{equation}
-D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{ x\in\rsqr \mid \lVert x - p_{i}\left(t\right) \rVert_{2} \leq R \}.
-\end{equation}
-\item We also assume $D_{i}\left(t\right) < A$
 \end{itemize}
-%\begin{block}{Sensor coverage} \begin{equation}
-%D\left(p_{i}\left(t\right),R\right) = D_{i}\left(t\right) = \{x\in\rsqr \mid\norm{x - p_{i}\left(t\right)}_{2} \leq R\}.
-%\end{equation}
-%\end{block}
 \end{frame}
-
-\begin{frame}[label=formulation2]{Problem Formulation}
-Coverage Constraint:
+%%
+\begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{itemize}
-\item A given area inside the area $A_{m} \subset A$ must be covered always (e.g. ground station).
-\end{itemize}
-A \emph{configuration}: A configuration $c$ at time $t$ is the stack of the sensor positions at time $t$,
-\begin{equation}
+\item A configuration $c$ at time $t$ is the stack of the sensor positions at time $t$,
+\begin{equation*}
 c\left(t\right) = \bmat{
-p_{1}^{T}\left(t\right)&\cdots&p_{n}^{T}\left(t\right)}^{T}\in\mathbb{R}^{2n}.
-\end{equation}
-\begin{block}{Notice}
-Since $D_{i}\left( t \right) < A$, there is no one configuration that can cover the entire area $A$ at once
+p_{1}^{T}\left(t\right)&\cdots&p_{n}^{T}\left(t\right)}^{T}\in\mathbb{R}^{2n}
+\end{equation*}
+\begin{itemize}
+\item The coverage of a configuration $D\left( c\left( t \right) \right) = \cap Cover\left( p_i, t \right)$.
+\end{itemize}
+\end{itemize}
+\begin{block}{Assumption}
+$D\left( c\left( t \right) \right) \subset A$ - a single configuration \emph{can't} provide full coverage!
 \end{block}
 \end{frame}
-
-\begin{frame}[label=formulation3]{Problem Formulation}
-Our goal is to find the set of configuration $\texttt{C}$ which contains configurations that all together provide full coverage of the area $A$, and yet maintains the coverage of $A_m$.
-
+%%
+\begin{frame}[label=probformulation2]{Problem Formulation}
+\begin{itemize}
+\item A partition $j$ of the area $A$ is $pr_{j} \subset A$
+\item The partitioning of $A, PR\left( A \right)$, built from $n$ partitions:
+\begin{equation*}
+PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j} = \emptyset \textbf{ and }\cup pr_{j} = A \}
+\end{equation*}
+\end{itemize}
+\end{frame}
+%%
+\begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{problem} \label{GeneralProblem}
-Find the set $\texttt{C} = \bmat{
-c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide coverage at time $i$ to some area $A_c \left( t_i \right)$, such that:
 \begin{enumerate}
-\item after time $n$, each point of $A$ was visited at least once,
-\item At each time there was coverage to some area $A_sm \subset A_m$.
+\item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
+\item Find a deployment such that for each partition $j,$ and some given time $t, A_{pr_{j}} \subseteq D\left( c\left( t \right) \right)$
 \end{enumerate}
 \end{problem}
 \end{frame}
