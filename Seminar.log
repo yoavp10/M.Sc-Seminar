@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  6 DEC 2018 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  7 DEC 2018 23:37
 entering extended mode
 **./Seminar.tex
 (Seminar.tex
@@ -682,10 +682,14 @@ ault.sty
 )
 (C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerouterthemedef
 ault.sty)))
-(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerthemeDresden.
-sty
-(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerouterthememin
-iframes.sty)
+(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerthemeFrankfur
+t.sty
+(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerouterthemesmo
+othbars.sty)
+(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerinnerthemerou
+nded.sty)
+(C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamercolorthemeorc
+hid.sty)
 (C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamercolorthemewha
 le.sty))
 (C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerfontthemeprof
@@ -958,20 +962,20 @@ File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
 ) (Seminar.aux)
 \openout1 = `Seminar.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1022,7 +1026,7 @@ LaTeX Font Info:    ... okay on input line 123.
 \everyMPtoPDFconversion=\toks55
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring OFF on input line 123.
+Package hyperref Info: Link coloring OFF on input line 124.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1032,9 +1036,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count187
 )
-LaTeX Info: Redefining \ref on input line 123.
-LaTeX Info: Redefining \pageref on input line 123.
-LaTeX Info: Redefining \nameref on input line 123.
+LaTeX Info: Redefining \ref on input line 124.
+LaTeX Info: Redefining \pageref on input line 124.
+LaTeX Info: Redefining \nameref on input line 124.
 
 (Seminar.out) (Seminar.out)
 \@outlinefile=\write5
@@ -1067,475 +1071,722 @@ Dictionary: translator-theorem-dictionary, Language: English
 ) (Seminar.nav)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<Figures/lapid-logo-45.pdf, id=112, 290.0469pt x 380.37297pt>
+<Figures/lapid-logo-45.pdf, id=132, 290.0469pt x 380.37297pt>
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 132.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 133.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [1
 
  <./Figures/lapid-logo-45.pdf>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 132.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 133.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [2{C:/Users/yoavp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Seminar
 .toc)
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 138.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 139.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [3
 
 ] (Seminar.toc)
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 144.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 145.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [4
 
 ]
-<Figures/motivation-figures-no-issue.png, id=268, 247.67531pt x 222.8325pt>
-File: Figures/motivation-figures-no-issue.png Graphic file (type png)
-<use Figures/motivation-figures-no-issue.png>
-Package pdftex.def Info: Figures/motivation-figures-no-issue.png  used on input
- line 160.
-(pdftex.def)             Requested size: 99.06836pt x 89.13141pt.
+Package epstopdf Info: Source file: <Figures/motivation/coverage.eps>
+(epstopdf)                    date: 2018-12-07 19:37:28
+(epstopdf)                    size: 21275 bytes
+(epstopdf)             Output file: <Figures/motivation/coverage-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2018-12-07 19:39:46
+(epstopdf)                    size: 5213 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/coverage
+-eps-converted-to.pdf Figures/motivation/coverage.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/coverage-eps-converted-to.pdf, id=317, 393.47pt x 236.885pt
+>
+File: Figures/motivation/coverage-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/motivation/coverage-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/coverage-eps-converted-to.pdf  used
+ on input line 164.
+(pdftex.def)             Requested size: 236.0838pt x 142.13208pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 160.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 164.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [5
 
- <./Figures/motivation-figures-no-issue.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 171.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ <./Figures/motivation/coverage-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 179.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 171.
+LaTeX Font Info:    Try loading font information for U+msb on input line 179.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 171.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 179.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 171.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 179.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 171.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 179.
 
 (C:\Users\yoavp\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<Figures/motivation-figures-not-enough.png, id=316, 252.19218pt x 217.5628pt>
-File: Figures/motivation-figures-not-enough.png Graphic file (type png)
-<use Figures/motivation-figures-not-enough.png>
-Package pdftex.def Info: Figures/motivation-figures-not-enough.png  used on inp
-ut line 171.
-(pdftex.def)             Requested size: 100.87508pt x 87.02357pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 171.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 179.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [6
 
- <./Figures/motivation-figures-not-enough.png>]
-<Figures/motivation-figures-constraint.png, id=366, 227.34938pt x 208.52907pt>
-File: Figures/motivation-figures-constraint.png Graphic file (type png)
-<use Figures/motivation-figures-constraint.png>
-Package pdftex.def Info: Figures/motivation-figures-constraint.png  used on inp
-ut line 178.
-(pdftex.def)             Requested size: 90.93813pt x 83.41014pt.
+]
+Package epstopdf Info: Source file: <Figures/motivation/coverage-radius.eps>
+(epstopdf)                    date: 2018-12-07 19:39:40
+(epstopdf)                    size: 21420 bytes
+(epstopdf)             Output file: <Figures/motivation/coverage-radius-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-12-07 19:39:47
+(epstopdf)                    size: 5292 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/coverage
+-radius-eps-converted-to.pdf Figures/motivation/coverage-radius.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/coverage-radius-eps-converted-to.pdf, id=435, 393.47pt x 23
+5.88126pt>
+File: Figures/motivation/coverage-radius-eps-converted-to.pdf Graphic file (typ
+e pdf)
+<use Figures/motivation/coverage-radius-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/coverage-radius-eps-converted-to.pd
+f  used on input line 189.
+(pdftex.def)             Requested size: 196.73451pt x 117.94034pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 178.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 189.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [7
 
- <./Figures/motivation-figures-constraint.png>]
+[7
+
+ <./Figures/motivation/coverage-radius-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/partial-coverage.eps>
+(epstopdf)                    date: 2018-12-07 19:48:12
+(epstopdf)                    size: 22917 bytes
+(epstopdf)             Output file: <Figures/motivation/partial-coverage-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-12-07 19:48:24
+(epstopdf)                    size: 5755 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/partial-
+coverage-eps-converted-to.pdf Figures/motivation/partial-coverage.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/partial-coverage-eps-converted-to.pdf, id=497, 530.98375pt 
+x 317.185pt>
+File: Figures/motivation/partial-coverage-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+<use Figures/motivation/partial-coverage-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/partial-coverage-eps-converted-to.p
+df  used on input line 198.
+(pdftex.def)             Requested size: 265.49121pt x 158.5921pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
 Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 198.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [8
 
-]
+ <./Figures/motivation/partial-coverage-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/partial-coverage-to-ful
+l.eps>
+(epstopdf)                    date: 2018-12-07 22:22:54
+(epstopdf)                    size: 23397 bytes
+(epstopdf)             Output file: <Figures/motivation/partial-coverage-to-ful
+l-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 22:23:08
+(epstopdf)                    size: 5849 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/partial-
+coverage-to-full-eps-converted-to.pdf Figures/motivation/partial-coverage-to-fu
+ll.eps>
+(epstopdf)             \includegraphics on input line 207.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf, id=557, 530.
+98375pt x 317.185pt>
+File: Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf Graphic 
+file (type pdf)
+<use Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/partial-coverage-to-full-eps-conver
+ted-to.pdf  used on input line 207.
+(pdftex.def)             Requested size: 265.49121pt x 158.5921pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 213.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 207.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [9
 
-]
+ <./Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/deployment-configuratio
+n.eps>
+(epstopdf)                    date: 2018-12-07 22:27:05
+(epstopdf)                    size: 9109 bytes
+(epstopdf)             Output file: <Figures/motivation/deployment-configuratio
+n-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 22:28:13
+(epstopdf)                    size: 3763 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/deployme
+nt-configuration-eps-converted-to.pdf Figures/motivation/deployment-configurati
+on.eps>
+(epstopdf)             \includegraphics on input line 216.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/deployment-configuration-eps-converted-to.pdf, id=617, 475.
+7775pt x 215.80624pt>
+File: Figures/motivation/deployment-configuration-eps-converted-to.pdf Graphic 
+file (type pdf)
+<use Figures/motivation/deployment-configuration-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/deployment-configuration-eps-conver
+ted-to.pdf  used on input line 216.
+(pdftex.def)             Requested size: 237.88815pt x 107.90285pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 226.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 216.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [10
 
-]
+ <./Figures/motivation/deployment-configuration-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/deployment-configuratio
+n-partial-full-example.eps>
+(epstopdf)                    date: 2018-12-07 22:32:12
+(epstopdf)                    size: 10879 bytes
+(epstopdf)             Output file: <Figures/motivation/deployment-configuratio
+n-partial-full-example-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 22:32:18
+(epstopdf)                    size: 4053 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/deployme
+nt-configuration-partial-full-example-eps-converted-to.pdf Figures/motivation/d
+eployment-configuration-partial-full-example.eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/deployment-configuration-partial-full-example-eps-converted
+-to.pdf, id=674, 475.7775pt x 215.80624pt>
+File: Figures/motivation/deployment-configuration-partial-full-example-eps-conv
+erted-to.pdf Graphic file (type pdf)
+<use Figures/motivation/deployment-configuration-partial-full-example-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: Figures/motivation/deployment-configuration-partial-fu
+ll-example-eps-converted-to.pdf  used on input line 225.
+(pdftex.def)             Requested size: 237.88815pt x 107.90285pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 244.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 225.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [11
 
-]
+ <./Figures/motivation/deployment-configuration-partial-full-example-eps-conver
+ted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/deployment-configuratio
+n-partial-full-example.eps>
+(epstopdf)                    date: 2018-12-07 22:32:12
+(epstopdf)                    size: 10879 bytes
+(epstopdf)             Output file: <Figures/motivation/deployment-configuratio
+n-partial-full-example-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 22:32:18
+(epstopdf)                    size: 4053 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/deployme
+nt-configuration-partial-full-example-eps-converted-to.pdf Figures/motivation/d
+eployment-configuration-partial-full-example.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+File: Figures/motivation/deployment-configuration-partial-full-example-eps-conv
+erted-to.pdf Graphic file (type pdf)
+<use Figures/motivation/deployment-configuration-partial-full-example-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: Figures/motivation/deployment-configuration-partial-fu
+ll-example-eps-converted-to.pdf  used on input line 234.
+(pdftex.def)             Requested size: 237.88815pt x 107.90285pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 244.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 234.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [12
 
 ]
+Package epstopdf Info: Source file: <Figures/motivation/deployment-configuratio
+n-partial-no-enough-sensors.eps>
+(epstopdf)                    date: 2018-12-07 22:44:15
+(epstopdf)                    size: 9621 bytes
+(epstopdf)             Output file: <Figures/motivation/deployment-configuratio
+n-partial-no-enough-sensors-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 22:44:20
+(epstopdf)                    size: 3648 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/deployme
+nt-configuration-partial-no-enough-sensors-eps-converted-to.pdf Figures/motivat
+ion/deployment-configuration-partial-no-enough-sensors.eps>
+(epstopdf)             \includegraphics on input line 243.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps-conv
+erted-to.pdf, id=785, 475.7775pt x 215.80624pt>
+File: Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps
+-converted-to.pdf Graphic file (type pdf)
+<use Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps-
+converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/deployment-configuration-partial-no
+-enough-sensors-eps-converted-to.pdf  used on input line 243.
+(pdftex.def)             Requested size: 237.88815pt x 107.90285pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 244.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 243.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [13
 
-]
+ <./Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps-c
+onverted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/motivation/deployment-configuratio
+n-coverage-constraint.eps>
+(epstopdf)                    date: 2018-12-07 23:06:23
+(epstopdf)                    size: 6096 bytes
+(epstopdf)             Output file: <Figures/motivation/deployment-configuratio
+n-coverage-constraint-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-07 23:11:14
+(epstopdf)                    size: 3200 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/deployme
+nt-configuration-coverage-constraint-eps-converted-to.pdf Figures/motivation/de
+ployment-configuration-coverage-constraint.eps>
+(epstopdf)             \includegraphics on input line 256.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/motivation/deployment-configuration-coverage-constraint-eps-converted-
+to.pdf, id=843, 202.7575pt x 215.80624pt>
+File: Figures/motivation/deployment-configuration-coverage-constraint-eps-conve
+rted-to.pdf Graphic file (type pdf)
+<use Figures/motivation/deployment-configuration-coverage-constraint-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: Figures/motivation/deployment-configuration-coverage-c
+onstraint-eps-converted-to.pdf  used on input line 256.
+(pdftex.def)             Requested size: 81.10156pt x 86.32095pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 259.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 256.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [14
 
-]
+ <./Figures/motivation/deployment-configuration-coverage-constraint-eps-convert
+ed-to.pdf>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 259.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 273.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [15
 
-] (Seminar.toc)
+]
+Package epstopdf Info: Source file: <Figures/motivation/partitioning.eps>
+(epstopdf)                    date: 2018-12-07 23:37:08
+(epstopdf)                    size: 3193 bytes
+(epstopdf)             Output file: <Figures/motivation/partitioning-eps-conver
+ted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=Figures/motivation/partitio
+ning-eps-converted-to.pdf Figures/motivation/partitioning.eps>
+(epstopdf)             \includegraphics on input line 289.
+runsystem(epstopdf --outfile=Figures/motivation/partitioning-eps-converted-to.p
+df Figures/motivation/partitioning.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Figures/motivation/partitioning-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-12-07 23:37:46
+(epstopdf)                    size: 2905 bytes.
+<Figures/motivation/partitioning-eps-converted-to.pdf, id=954, 216.81pt x 196.7
+35pt>
+File: Figures/motivation/partitioning-eps-converted-to.pdf Graphic file (type p
+df)
+<use Figures/motivation/partitioning-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/motivation/partitioning-eps-converted-to.pdf  
+used on input line 289.
+(pdftex.def)             Requested size: 86.72246pt x 78.6926pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 265.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 289.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [16
 
-]
+ <./Figures/motivation/partitioning-eps-converted-to.pdf>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 272.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 311.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [17
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 272.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 326.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-
-[18
+ [18
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 285.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 339.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [19
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 285.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 357.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [20
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 285.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 357.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [21
 
 ]
-<Figures/Voronoi-example.png, id=1096, 451.6875pt x 451.6875pt>
-File: Figures/Voronoi-example.png Graphic file (type png)
-<use Figures/Voronoi-example.png>
-Package pdftex.def Info: Figures/Voronoi-example.png  used on input line 293.
-(pdftex.def)             Requested size: 180.67178pt x 180.67178pt.
-
-Overfull \vbox (19.87767pt too high) detected at line 293
- []
-
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 293.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 357.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[22
+ [22
 
- <./Figures/Voronoi-example.png (PNG copy)>]
+]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 303.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 372.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [23
 
 ]
-<Figures/central-Voronoi-example.png, id=1192, 421.575pt x 316.18124pt>
-File: Figures/central-Voronoi-example.png Graphic file (type png)
-<use Figures/central-Voronoi-example.png>
-Package pdftex.def Info: Figures/central-Voronoi-example.png  used on input lin
-e 310.
-(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 310.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 372.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [24
 
- <./Figures/central-Voronoi-example.png (PNG copy)>]
+] (Seminar.toc)
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 318.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 378.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [25
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 336.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 385.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [26
 
 ]
-<Figures/Lloyds-alg-from-cortes.png, id=1340, 744.53156pt x 203.25937pt>
-File: Figures/Lloyds-alg-from-cortes.png Graphic file (type png)
-<use Figures/Lloyds-alg-from-cortes.png>
-Package pdftex.def Info: Figures/Lloyds-alg-from-cortes.png  used on input line
- 350.
-(pdftex.def)             Requested size: 223.36119pt x 60.97827pt.
-
-Overfull \vbox (12.28397pt too high) detected at line 350
- []
-
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 350.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 385.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[27
-
- <./Figures/Lloyds-alg-from-cortes.png>]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 360.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [28
+ [27
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 360.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+
+[28
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [29
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 360.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [30
 
 ]
-<Figures/graph-example.png, id=1532, 720.44156pt x 357.58594pt>
-File: Figures/graph-example.png Graphic file (type png)
-<use Figures/graph-example.png>
-Package pdftex.def Info: Figures/graph-example.png  used on input line 367.
-(pdftex.def)             Requested size: 302.58339pt x 150.18506pt.
+<Figures/Voronoi-example.png, id=1793, 451.6875pt x 451.6875pt>
+File: Figures/Voronoi-example.png Graphic file (type png)
+<use Figures/Voronoi-example.png>
+Package pdftex.def Info: Figures/Voronoi-example.png  used on input line 406.
+(pdftex.def)             Requested size: 180.67178pt x 180.67178pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 367.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 406.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [31
 
- <./Figures/graph-example.png>]
+ <./Figures/Voronoi-example.png (PNG copy)>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 376.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 416.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [32
 
 ]
+<Figures/central-Voronoi-example.png, id=1904, 421.575pt x 316.18124pt>
+File: Figures/central-Voronoi-example.png Graphic file (type png)
+<use Figures/central-Voronoi-example.png>
+Package pdftex.def Info: Figures/central-Voronoi-example.png  used on input lin
+e 423.
+(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 383.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 423.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [33
 
-] (Seminar.toc)
+ <./Figures/central-Voronoi-example.png (PNG copy)>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 389.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 431.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [34
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 449.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [35
 
 ]
+<Figures/Lloyds-alg-from-cortes.png, id=2072, 744.53156pt x 203.25937pt>
+File: Figures/Lloyds-alg-from-cortes.png Graphic file (type png)
+<use Figures/Lloyds-alg-from-cortes.png>
+Package pdftex.def Info: Figures/Lloyds-alg-from-cortes.png  used on input line
+ 463.
+(pdftex.def)             Requested size: 223.36119pt x 60.97827pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 463.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [36
 
-]
+ <./Figures/Lloyds-alg-from-cortes.png>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 398.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 473.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [37
 
 ]
-Overfull \vbox (1.3836pt too high) detected at line 416
- []
-
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 416.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 473.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[38
+ [38
 
 ]
-<Figures/proj-lloyds-off.png, id=1915, 421.575pt x 316.18124pt>
-File: Figures/proj-lloyds-off.png Graphic file (type png)
-<use Figures/proj-lloyds-off.png>
-Package pdftex.def Info: Figures/proj-lloyds-off.png  used on input line 436.
-(pdftex.def)             Requested size: 126.47346pt x 94.8551pt.
-
-Overfull \hbox (3.5594pt too wide) in paragraph at lines 436--436
- [][] 
- []
-
-<Figures/proj-lloyds-on.png, id=1916, 421.575pt x 316.18124pt>
-File: Figures/proj-lloyds-on.png Graphic file (type png)
-<use Figures/proj-lloyds-on.png>
-Package pdftex.def Info: Figures/proj-lloyds-on.png  used on input line 436.
-(pdftex.def)             Requested size: 126.47346pt x 94.8551pt.
-
-Overfull \hbox (3.5594pt too wide) in paragraph at lines 436--436
- [][] 
- []
-
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 436.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 473.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[39
+ [39
 
- <./Figures/proj-lloyds-off.png (PNG copy)> <./Figures/proj-lloyds-on.png (PNG 
-copy)>]
+]
+<Figures/graph-example.png, id=2293, 720.44156pt x 357.58594pt>
+File: Figures/graph-example.png Graphic file (type png)
+<use Figures/graph-example.png>
+Package pdftex.def Info: Figures/graph-example.png  used on input line 480.
+(pdftex.def)             Requested size: 302.58339pt x 150.18506pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 444.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 480.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [40
 
-]
+ <./Figures/graph-example.png>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 449.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 489.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [41
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 460.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 496.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [42
 
-]
+[42
+
+] (Seminar.toc)
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 470.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 502.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [43
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 481.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 511.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [44
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 481.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 511.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [45
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 481.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 511.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [46
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 481.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 529.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [47
 
 ]
-Overfull \hbox (18.44646pt too wide) detected at line 493
-\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95  [] \OT1/cmr/
-m/n/10.95 + [] [][] []
+<Figures/proj-lloyds-off.png, id=2732, 421.575pt x 316.18124pt>
+File: Figures/proj-lloyds-off.png Graphic file (type png)
+<use Figures/proj-lloyds-off.png>
+Package pdftex.def Info: Figures/proj-lloyds-off.png  used on input line 549.
+(pdftex.def)             Requested size: 126.47346pt x 94.8551pt.
+
+Overfull \hbox (3.5594pt too wide) in paragraph at lines 549--549
+ [][] 
+ []
+
+<Figures/proj-lloyds-on.png, id=2733, 421.575pt x 316.18124pt>
+File: Figures/proj-lloyds-on.png Graphic file (type png)
+<use Figures/proj-lloyds-on.png>
+Package pdftex.def Info: Figures/proj-lloyds-on.png  used on input line 549.
+(pdftex.def)             Requested size: 126.47346pt x 94.8551pt.
+
+Overfull \hbox (3.5594pt too wide) in paragraph at lines 549--549
+ [][] 
  []
 
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 493.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 549.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
 [48
 
-]
-Overfull \hbox (18.44646pt too wide) detected at line 493
-\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95  [] \OT1/cmr/
-m/n/10.95 + [] [] []
- []
-
+ <./Figures/proj-lloyds-off.png (PNG copy)> <./Figures/proj-lloyds-on.png (PNG 
+copy)>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 493.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 557.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[49
+ [49
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 503.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 562.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [50
 
-] (Seminar.toc)
+]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 511.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 573.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [51
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 521.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 583.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [52
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 594.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [53
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 594.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [54
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 594.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [55
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 594.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [56
+
+]
+Overfull \hbox (18.44646pt too wide) detected at line 606
+\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95  [] \OT1/cmr/
+m/n/10.95 + [] [][] []
+ []
+
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 606.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[57
+
+]
+Overfull \hbox (18.44646pt too wide) detected at line 606
+\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95  [] \OT1/cmr/
+m/n/10.95 + [] [] []
+ []
+
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 606.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[58
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 616.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [59
+
+] (Seminar.toc)
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 624.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [60
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 634.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [61
 
 ]
 \tf@nav=\write6
@@ -1547,22 +1798,22 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 521.
 \tf@snm=\write8
 \openout8 = `Seminar.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 523.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 523.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 636.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 636.
  (Seminar.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 523.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 523.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 636.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 636.
 Package rerunfilecheck Info: File `Seminar.out' has not changed.
-(rerunfilecheck)             Checksum: 6530CF4BE32FB555432B3132D6FDA6DA;1013.
+(rerunfilecheck)             Checksum: D3B1A69F4437077B4D5868CBC29BD57F;1014.
  ) 
 Here is how much of TeX's memory you used:
- 23414 strings out of 492973
- 461559 string characters out of 3135932
- 577577 words of memory out of 3000000
- 26498 multiletter control sequences out of 15000+200000
- 21074 words of font info for 89 fonts, out of 3000000 for 9000
+ 23612 strings out of 492973
+ 467191 string characters out of 3135932
+ 584587 words of memory out of 3000000
+ 26645 multiletter control sequences out of 15000+200000
+ 20767 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,65p,776b,774s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,65p,776b,917s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
@@ -1580,11 +1831,10 @@ e1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Seminar.pdf (52 pages, 910679 bytes).
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Seminar.pdf (61 pages, 1083450 bytes).
 PDF statistics:
- 2691 PDF objects out of 2984 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3614 PDF objects out of 4296 (max. 8388607)
+ 245 named destinations out of 1000 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

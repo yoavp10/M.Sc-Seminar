@@ -1,6 +1,6 @@
 \documentclass[t]{beamer}
 
-\usetheme[compress]{Dresden}
+\usetheme{Frankfurt}
 %\usecolortheme{beaver}
 \usefonttheme{professionalfonts}
 % Insert the frame number at the bottom line
@@ -95,20 +95,19 @@
 \newtheorem*{cor}{Corollary}
 \newtheorem*{thm}{Theorem}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{A Projected Lloyd’s Algorithm for Coverage Control Problems}
 
-\author
-{Yoav Palti, Supervisor: Associate Professor Daniel Zelazo}
+\author[Palti]
+{Yoav Palti}
 
 \institute[]
-{Faculty of Aerospace Engineering, Technion, Haifa, Israel}
+{Faculty of Aerospace Engineering, Technion - Israel Institude Of Technology}
 
 \date[MSc Seminar]
-{M.Sc. Seminar \\[1ex]
+{M.Sc. Seminar \\
+Supervisor: Associate Professor Daniel Zelazo \\[1ex]
 \footnotesize\em December 10, 2018}
 
 \AtBeginSection[]
@@ -118,6 +117,8 @@
     \tableofcontents[currentsection]
   \end{frame}
 }
+
+\setbeamertemplate{blocks}[default]%[rounded][shadow=true]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -151,32 +152,143 @@
 %\end{itemize}
 %\end{frame}
 
+%%% MOTIVATION %%%
 \subsection[Motivation]{}
-\begin{frame}[label=motivation1]{Motivation}
-Covering an area - (relatively) easy
-\begin{center}
-\includegraphics[scale=0.4]{motivation-figures-no-issue.png}
-\end{center}
-\end{frame}
+\begin{frame}[label=motivation1]{What Is Sensor Coverage?}
+Given an area, we want to sense what's happening inside
 
-\begin{frame}[label=motivation2]{Motivation}
-Covering an area with not sufficient amount of sensors - not so easy
+\begin{figure}[b]
+\includegraphics[scale=0.6]{motivation/coverage.eps}
+\end{figure}
+In red - the sensing coverage.
+\end{frame}
+%%
+\begin{frame}[label=motivation2]{What Is Sensor Coverage?}
+Why would we like to do that?
 \begin{itemize}
-\item \textit{Requires better definition of behaviour}
-\begin{center}
-\includegraphics[scale=0.4]{motivation-figures-not-enough.png}
-\end{center}
+\item Surveillance
+\item Photographing
+\item iRobot!
 \end{itemize}
 
+Those are all sensing coverage problem$^{1,2,3}$.
+
+\footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
+\footnotetext[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
+\footnotetext[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
+\end{frame}
+%%
+\begin{frame}[label=motivation3]{What Is Sensor Coverage?}
+Coverage "Radius" - how much a sensor can sense
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/coverage-radius.eps}
+\end{figure}
+
+In red - the sensor coverage \emph{radius}
+\end{frame}
+%%
+\begin{frame}[label=motivation4]{Partial Coverage}
+Single sensor - double the area size
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/partial-coverage.eps}
+\end{figure}
+In red - the sensor coverage. No \emph{full coverage}!
+\end{frame}
+%%
+\begin{frame}[label=motivation5]{Full Coverage (again)}
+Let's add another sensor!
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/partial-coverage-to-full.eps}
+\end{figure}
+New sensor added - now we have \emph{full coverage} once again!
+\end{frame}
+%%
+\begin{frame}[label=motivation6]{Deployment}
+Now we're dealing with multiple sensors. How should we configure them?
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/deployment-configuration.eps}
+\end{figure}
+We have 12 sensors which we can \emph{deploy} in various configurations.
+\end{frame}
+%%
+\begin{frame}[label=motivation7]{Deployment and full coverage}
+Is it that simple?
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/deployment-configuration-partial-full-example.eps}
+\end{figure}
+One configuration results with full coverage, while the other one doesn't.
+\end{frame}
+%%
+\begin{frame}[label=motivation8]{Deployment and full coverage}
+Is it that simple?
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/deployment-configuration-partial-full-example.eps}
+\end{figure}
+One configuration results with full coverage, while the other one doesn't.
+\end{frame}
+%%
+\begin{frame}[label=motivation9]{Partial Coverage}
+There exists a deployment with 12 sensors which can cover the area. What if we only have 6 sensors?
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/deployment-configuration-partial-no-enough-sensors.eps}
+\end{figure}
+There doesn't exists a configuration that can supply full coverage!
+\end{frame}
+%%
+\begin{frame}[label=motivation10]{Making it a bit more interesting...}
+Let's say that we want to maintain coverage on a specific area, due to:
+\begin{itemize}
+\item Connection to home base
+\item Maintain surveillance on a target
+\item \ldots
+\begin{figure}[b]
+\includegraphics[scale=0.4]{motivation/deployment-configuration-coverage-constraint.eps}
+\end{figure}
+We have to take this into account when we build our coverage \emph{strategy}.
+\end{itemize}
+\end{frame}
+%%
+\begin{frame}[label=motivation11]{Partial Coverage Strategy}
+Dealing with partial coverage - many possible behaviours:
+\begin{itemize}
+\item Set of trajectories $^{1,2,3}$
+\item \emph{Tiling the area}
+\item \ldots
+\end{itemize}
+
+By choosing any strategy, a \emph{coverage controller}$^4$ must be provided.
+
+\footnotetext[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468.}
+\footnotetext[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
+\footnotetext[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
+and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
+\footnotetext[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
+\end{frame}
+%%
+\begin{frame}[label=motivation12]{Partitioning as a strategy}
+\emph{Partitioning} (or tiling) an area - cover a small part of the area each time.
+\begin{itemize}
+\item Main benefit - provide coverage of a subset of an area constantly.
+\end{itemize}
+
+Cortes et al.$^1$ provided a controller that know how to partition an area and provide coverage.
+
+\begin{figure}[b]
+\includegraphics[scale=0.4]{motivation/partitioning.eps}
+\end{figure}
+
+\footnotetext[1]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks.  IEEE Transactions on Robotics and Automation, 20(2), 243-255.}
+
 \end{frame}
 
-\begin{frame}[label=motivation3]{Motivation}
-Maintain contact with home base (at least in steady state) - hard
-\begin{center}
-\includegraphics[scale=0.4]{motivation-figures-constraint.png}
-\end{center}
-\end{frame}
-
+%%% Problem Formulation %%%
 \subsection[Problem Formulation]{}
 \begin{frame}[label=formulation]{Problem Formulation}
 \begin{itemize}
@@ -207,9 +319,9 @@ A \emph{configuration}: A configuration $c$ at time $t$ is the stack of the sens
 c\left(t\right) = \bmat{
 p_{1}^{T}\left(t\right)&\cdots&p_{n}^{T}\left(t\right)}^{T}\in\mathbb{R}^{2n}.
 \end{equation}
-\begin{alertblock}{Notice}
+\begin{block}{Notice}
 Since $D_{i}\left( t \right) < A$, there is no one configuration that can cover the entire area $A$ at once
-\end{alertblock}
+\end{block}
 \end{frame}
 
 \begin{frame}[label=formulation3]{Problem Formulation}
@@ -223,39 +335,6 @@ c_{1}^{T}\left(t_1\right)&\cdots&c_{n}^{T}\left(t_n\right)}^{T}$ that provide co
 \item At each time there was coverage to some area $A_sm \subset A_m$.
 \end{enumerate}
 \end{problem}
-\end{frame}
-
-\subsection[Literature Review]{}
-\begin{frame}[label=litrev1]{Literature Review}
-\begin{itemize}
-\item<1-> Covering an area$^{1,2,3}$: \begin{itemize}
-\item<2-> Photographing
-\item<2-> Tracking
-\item<2-> iRobot...
-\end{itemize}
-\item<3-> \textit{Coverage Control}$^{4}$
-\end{itemize}
-
-
-\footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
-\footnotetext[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
-\footnotetext[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
-\footnotetext[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
-\end{frame}
-
-\begin{frame}[label=litrev2]{Literature Review}
-\begin{itemize}
-\item<1-> Widely used concept - set of trajectories$^{1,2,3}$
-\item<2-> Another concept - \textit{Voronoi Partitioning}
-\end{itemize}
-\pause
-According to [Cortes2004]$^{4}$, It is possible to use partitioning for full coverage.
-
-\footnotetext[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468. https://doi.org/10.1109/CDC.2013.6760414}
-\footnotetext[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
-\footnotetext[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
-and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676}
-\footnotetext[4]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks. Robotics and Automation, …, 20(2), 13.}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
