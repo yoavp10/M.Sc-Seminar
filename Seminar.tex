@@ -23,6 +23,7 @@
 \usepackage{dcolumn}% decimal-aligned tabular math columns
 \usepackage{float}
 \usepackage{algorithm}
+\usepackage{caption}
 \usepackage[noend]{algpseudocode}
 %\usepackage{subfig}
 
@@ -166,16 +167,17 @@ In red - the sensing coverage.
 \begin{frame}[label=motivation2]{What Is Sensor Coverage?}
 Why would we like to do that?
 \begin{itemize}
-\item Surveillance
-\item Photographing
-\item iRobot!
+\item Surveillance$^{1}$
+\item Photographing$^{1}$
+\item Exploring$^2$
+\item iRobot! $^3$
 \end{itemize}
 
-Those are all sensing coverage problem$^{1,2,3}$.
+Those are all sensing coverage problem$^{1,3}$.
 
 \footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
-\footnotetext[2]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
-\footnotetext[3]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
+\footnotetext[2]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
+\footnotetext[3]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
 \end{frame}
 %%
 \begin{frame}[label=motivation3]{What Is Sensor Coverage?}
@@ -224,16 +226,7 @@ Is it that simple?
 One configuration results with full coverage, while the other one doesn't.
 \end{frame}
 %%
-\begin{frame}[label=motivation8]{Deployment and full coverage}
-Is it that simple?
-
-\begin{figure}[b]
-\includegraphics[scale=0.5]{motivation/deployment-configuration-partial-full-example.eps}
-\end{figure}
-One configuration results with full coverage, while the other one doesn't.
-\end{frame}
-%%
-\begin{frame}[label=motivation9]{Partial Coverage}
+\begin{frame}[label=motivation8]{Partial Coverage}
 There exists a deployment with 12 sensors which can cover the area. What if we only have 6 sensors?
 
 \begin{figure}[b]
@@ -242,7 +235,7 @@ There exists a deployment with 12 sensors which can cover the area. What if we o
 There doesn't exists a configuration that can supply full coverage!
 \end{frame}
 %%
-\begin{frame}[label=motivation10]{Making it a bit more interesting...}
+\begin{frame}[label=motivation9]{Making it a bit more interesting...}
 Let's say that we want to maintain coverage on a specific area, due to:
 \begin{itemize}
 \item Connection to home base
@@ -255,20 +248,19 @@ We have to take this into account when we build our coverage \emph{strategy}.
 \end{itemize}
 \end{frame}
 %%
-\begin{frame}[label=motivation11]{Partial Coverage Strategy}
+\begin{frame}[label=motivation10]{Partial Coverage Strategy}
 Dealing with partial coverage - many possible behaviours:
 \begin{itemize}
-\item Set of trajectories $^{1,2,3}$
-\item \emph{Tiling the area}
+\item Set of trajectories $^{1,2}$
+\item \emph{Tiling the area}$^{3}$
 \item \ldots
 \end{itemize}
 
-By choosing any strategy, a \emph{coverage controller}$^4$ must be provided.
+By choosing any strategy, a \emph{coverage controller}$^3$ must be provided.
 
 \footnotetext[1]{\tiny Atinç, G. M., Stipanović, D. M., Voulgaris, P. G., \& Karkoub, M. (2013). Supervised coverage control with guaranteed collision avoidance and proximity maintenance. Proceedings of the IEEE Conference on Decision and Control, 3463–3468.}
 \footnotetext[2]{\tiny Hussein, I. I., \& Stipanovic, D. M. (2007). Effective Coverage Control for Mobile Sensor Networks With Guaranteed Collision Avoidance. IEEE Transactions on Control Systems Technology, 15(4), 642–657.}
-\footnotetext[3]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
-and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
+\footnotetext[3]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks.  IEEE Transactions on Robotics and Automation, 20(2), 243-255.}
 \footnotetext[4]{\tiny Cassandras, C. G., \& Li, W. (2005). Sensor Networks and Cooperative Control. Decision and Control, 2005 and 2005 European Control Conference. CDC-ECC ’05. 44th IEEE Conference On, 4237–4238.}
 \end{frame}
 %%
@@ -278,14 +270,14 @@ and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
 \item Main benefit - provide coverage of a subset of an area constantly.
 \end{itemize}
 
-Cortes et al.$^1$ provided a controller that know how to partition an area and provide coverage.
+Cortes et al. provided a controller that know how to partition an area and provide coverage, using Centroidal Voronoi Tessellations$^1$.
 
 \begin{figure}[b]
 \includegraphics[scale=0.4]{motivation/partitioning.eps}
 \end{figure}
 
-\footnotetext[1]{\tiny Cortes, J., \& Martinez, S. (2004). Coverage control for mobile sensing networks.  IEEE Transactions on Robotics and Automation, 20(2), 243-255.}
-
+\footnotetext[1]{\tiny Du, Q., Faber, V., \& Gunzburger, M., “Centroidal Voronoi Tessellations: Applications
+and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
 \end{frame}
 
 %%% Problem Formulation %%%
@@ -332,7 +324,7 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \begin{problem} \label{GeneralProblem}
 \begin{enumerate}
 \item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
-\item Find a deployment such that for each partition $j,$ and some given time $t, A_{pr_{j}} \subseteq D\left( c\left( t \right) \right)$
+\item Find a deployment controller such that for each partition $j,$ and some given time $t, A_{pr_{j}} \subseteq D\left( c\left( t \right) \right)$, assuming that the controller is in its steady state.
 \end{enumerate}
 \end{problem}
 \end{frame}
@@ -452,7 +444,7 @@ u_{i} = -k_{p}\left( p_i - C_{V_{i}} \right)
 
 \begin{figure}[b]
 \centering
-\includegraphics[scale=0.3]{Lloyds-alg-from-cortes.png}
+\includegraphics[scale=0.3]{background/Lloyds-alg-from-cortes.png}
 \caption{A simulation from [Cortes2004] with 32 agents and Gaussian density function}
 \end{figure}
 \end{frame}
@@ -472,7 +464,12 @@ Where:
 \end{frame}
 %%
 \begin{frame}[label=lloydsalg8]{Lloyd's Algorithm}
-An important thing we have to remember - Lloyd's algorithm is NOT a distributed calculation!
+\begin{itemize}
+\item This form of Lloyd's algorithm is centralized!
+\item The calculation of the Voronoi partitions converges into a local minima
+\end{itemize}
+An important thing we have to remember - \\
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -480,17 +477,37 @@ An important thing we have to remember - Lloyd's algorithm is NOT a distributed 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section[Problem Solution]{Problem Solution}
-
+%%% PLA %%%
 \subsection[Projected Lloyd's Algorithm]{}
-\begin{frame}[label=projlloydsalgo1]{Projected Lloyd's Algorithm}
-We should supply a solution for the "Coverage Constraint" \pause
+\begin{frame}[label=probreminder]{Problem reminder}
+So what were we trying to do (in simple words)?
 \begin{block}{Reminder}
-A given area inside the area $A_{m} \subset A$ must be covered always
+\begin{enumerate}
+\item Partition the area $A$, such that any partition will intersect with some sub-area $A_m$.
+\item For each partition, find some deployment strategy.
+\end{enumerate}
 \end{block}\pause
-We came up with a rather simple solution for this problem.
+$[$Cortes2004$]$ came up with a solution for the second issue. But what about the first one?
 \end{frame}
-
-\begin{frame}[label=projlloydsalgo2]{Projected Lloyd's Algorithm}
+%%
+\begin{frame}[label=solproposal]{Projection}
+A possible solution - After calculating the center of mass of each cell, \emph{project} the results into $A_m$ boundaries.
+\\ \pause
+\begin{block}{Projection}
+A  linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
+\end{block}
+We will project using Euclidean distance.
+\end{frame}
+%%
+\begin{frame}[label=solprojectionexample]{Projection example}
+\begin{figure}
+\centering
+\includegraphics<1>[scale=0.7]{Problem-solution/projection-before.eps}
+\includegraphics<2>[scale=0.7]{Problem-solution/projection-after.eps}
+\end{figure}
+\end{frame}
+%%
+\begin{frame}[label=projlloydsalgo]{Projected Lloyd's Algorithm}
 \begin{algorithm}[H]
 \caption{Projected Lloyd's Algorithm (PLA)}\label{ProjLloydsAlgorithm}
 \begin{algorithmic}[1]
@@ -501,52 +518,54 @@ We came up with a rather simple solution for this problem.
 \State Repeat until converge.
 \end{algorithmic}
 \end{algorithm}
+\end{frame}
+%%
+\begin{frame}[label=projlloydsalgoexample]{Projected Lloyd's Algorithm Example}
+Assume that we have an area $A$ and some sub-area $A_m$:
+\begin{figure}
+\includegraphics[scale=0.6]{Problem-solution/PLA-example-empty.eps}
+\end{figure}
+\end{frame}
+%%
+\begin{frame}[label=projlloydsalgo3]{Projected Lloyd's Algorithm}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}[!H]
+  \includegraphics[scale=0.43]{Problem-solution/proj-lloyds-off.eps}
+  \caption*{CVT using Lloyd's Algorithm}
+\end{figure}
+\column{0.5\textwidth}
+\begin{figure}[!H]
+  \includegraphics[scale=0.43]{Problem-solution/proj-lloyds-on.eps}
+  \caption*{Partitioning using PLA}
+\end{figure}
+\end{columns}
 
-Writing this algorithm as a controller:
+\end{frame}
+%%
+\begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
+PLA in continuous time controller form:
 \begin{equation} \label{ProjectedLloydsContol}
 u_{i} = -k_{p}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
 \end{equation} 
-\end{frame}
 
-\begin{frame}[label=projlloydsalgo3]{Projected Lloyd's Algorithm}
-In the following example:
-\begin{itemize}
-\item Left - regular CVT, build with the original Lloyd's Algorithm.
-\item Right - A partitioning built with the PLA.
-\end{itemize}
-\begin{figure}
-\centering
-\begin{minipage}{.4\textwidth}
-  \centering
-  \includegraphics[scale=0.3]{proj-lloyds-off.png}
-\end{minipage}
-\begin{minipage}{.4\textwidth}
-  \centering
-  \includegraphics[scale=0.3]{proj-lloyds-on.png}
-\end{minipage}
-\end{figure}
-
-\end{frame}
-
-\begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
 \begin{theorem}
 The projected Lloyd's Algorithm is locally asymptotically stable
 \end{theorem}
 
-As the projection is a linear operator, the controller is also locally asymptotically stable, and the proof is virtually the same as was given by Cortes et al. The proof is based on a proposal of Lyaponov function, and then using the direct Lyaponov method to prove the stability
+Proof of stability is using the direct Lyapunov method, with a potential function being very similar to the one proposed in [Cortes2004]:
+\begin{equation*}
+\mathcal{H_{V}}\left( P \right) = \sum_{i=1}^{n} J_{V_i,C_{V_i}} + \sum_{i=1}^{n} M_{V_i} \norm{p_i - \textsc{proj}\left( C_{V_i}\right)}^2
+\end{equation*}
 \end{frame}
 
-\begin{frame}[label=projlloydsalgoproof]{Proof of stability}
-As the projection is a linear operator, the controller is also locally asymptotically stable, and the proof is virtually the same as was given by Cortes et al.\\
-
-\end{frame}
-
+%%% Problem solution algorithm %%%
 \subsection[Problem Solution Algorithm]{}
 \begin{frame}[label=probsolalg1]{Problem Solution Algorithm}
-So far, we've given solution for:
+So far:
 \begin{itemize}
-\item Covering a given area using Voronoi partitioning
-\item Partition and area such that the coverage constraint is fulfilled.
+\item Covering a given area using Voronoi partitioning - \textbf{Solved} ([Cortes2004]).
+\item Partition and area such that the coverage constraint is fulfilled - \textbf{Solved} (PLA).
 \end{itemize}
 
 Therefore, we are ready for the problem solution algorithm...
@@ -562,16 +581,66 @@ Therefore, we are ready for the problem solution algorithm...
 \end{algorithm}
 \end{frame}
 
-\subsection[Lloyd's Algorithm and Formation Control]{}
-\begin{frame}[label=lloydsandformation1]{Lloyd's Algorithm and Formation Control}
+%%% Problem simulations %%%
+\subsection[Simulations]{}
+\begin{frame}[label=sl3]{Some Simulation}
+List of simulations to create:
 \begin{itemize}
-\item<1-> Problem solved.
-\item<2-> Make it more interesting...
-\item<3-> Combine Lloyd's Algorithm with distance-based formation control! \begin{itemize}
-\item<4-> create and maintain spatial properties partially or fully (We do not provide a condition where this combination meets the requirements).
-\end{itemize}
+\item 3 agents, 5 big partitions, no formation, no PLA
+\item 3 agents, 5 big partitions, no formation, PLA
+\item 10 agents, 5 big partitions, no formation, PLA
 \end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Formation Control %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Motivation%%%
+\section[Formation Control and PLA]{}
+\begin{frame}[label=onemorething]{One more thing...}
+\begin{itemize}
+\item<1-> Problem solved.
+\item<2-> What if maintaining spatial properties is also needed? \begin{itemize}
+	\item<2-> Geolocation
+	\item<2-> communications
+	\item<2-> $\ldots$
+\end{itemize}
+\item<3-> Incorporate formation control into existing algorithms!
+\end{itemize}
+\end{frame}
+
+%%% Math background %%%
+\subsection[Distance-Based Formation Control]{}
+\begin{frame}[label=distanceformation1]{Formation Control}
+The concept of distance-based formation control is well researched$^{1,2}$.
+For complete background, some prior knowledge on algebraic graph theory is needed. Let's simplify:
+\begin{itemize}
+\item We have agents $1 \ldots n$ on positions $p_{i}$ \pause
+\item Goal - agents $i,j (i \neq j)$ will be at distance $d_{ij}$ \pause
+\item Only $\varepsilon$ agents can share information.
+\end{itemize}
+
+\footnotetext[1]{aura Krick, Mireille E. Broucke \& Bruce A. Francis (2009) Stabilisation of infinitesimally rigid formations of multi-robot networks, International Journal of Control, 82:3, 423-439.}
+\footnotetext[2]{K. Oh and H. Ahn, "Distance-based formation control using euclidean distance dynamics matrix: Three-agent case," Proceedings of the 2011 American Control Conference, San Francisco, CA, 2011, pp. 4810-4815.}
+\end{frame}
+%%
+\begin{frame}[label=distanceformation2]{Formation Control}
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=0.42]{graph-example.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=distanceformation3]{Formation Control}
+For a single agent $p_i$, the controller will have the following form:
+\begin{equation}
+    \dot{p_{i}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
+    \label{formation controller}
+\end{equation}
+This controller is locally asymptotically stable.
+\end{frame}
+
 
 \begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
 As both of the controllers are convex, we propose to simply combine them with some coefficient:\\
@@ -596,56 +665,6 @@ How to prove:
 \end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%% Simulations %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section[Simulations]{Simulations}
-\subsection[Some Simulation]{}
-\begin{frame}[label=sl3]{Some Simulation}
-List of simulations to create:
-\begin{itemize}
-\item 3 agents, 5 big partitions, no formation, no PLA
-\item 3 agents, 5 big partitions, no formation, PLA
-\item 10 agents, 5 big partitions, no formation, PLA
-\item 6 agents, 5 big partitions, some formation, PLA
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%% Formation %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection[Distance-Based Formation Control]{}
-\begin{frame}[label=distanceformation1]{Formation Control}
-For a complete background, some prior knowledge on algebraic graph theory is needed. Let's simplify:
-\begin{itemize}
-\item We have agents $1 \ldots n$ on positions $p_{i}$ \pause
-\item Goal - agents $i,j (i \neq j)$ will be at distance $d_{ij}$ \pause
-\item Only $\varepsilon$ agents can share information.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=distanceformation2]{Formation Control}
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=0.42]{graph-example.png}
-\end{figure}
-\end{frame}
-
-\begin{frame}[label=distanceformation3]{Formation Control}
-For a single agent $p_i$, the controller will have the following form:
-\begin{equation}
-    \dot{p_{i}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
-    \label{formation controller}
-\end{equation}
-This controller is locally asymptotically stable.
-\end{frame}
-
-\subsection[Projection Operator]{}
-\begin{frame}[label=projoperator]{Projection Operator}
-
-The projection linear operator is defined as a linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
-
-\end{frame}
 \end{document}
+
+
