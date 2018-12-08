@@ -101,15 +101,15 @@
 \title{A Projected Lloyd’s Algorithm for Coverage Control Problems}
 
 \author[Palti]
-{Yoav Palti}
+{\Large Yoav Palti}
 
 \institute[]
-{Faculty of Aerospace Engineering, Technion - Israel Institude Of Technology}
+{Faculty of Aerospace Engineering, Technion - Israel Institute Of Technology}
 
 \date[MSc Seminar]
-{M.Sc. Seminar \\
+{\footnotesize M.Sc. Seminar \\
 Supervisor: Associate Professor Daniel Zelazo \\[1ex]
-\footnotesize\em December 10, 2018}
+\em December 10, 2018}
 
 \AtBeginSection[]
 {
@@ -144,14 +144,6 @@ Supervisor: Associate Professor Daniel Zelazo \\[1ex]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section[Introduction]{Introduction}
-%\subsection[About Me]{}
-%\begin{frame}[label=abtme]{About Me}
-%\begin{itemize}
-%\item Yoav Palti, B.Sc in Aerospace Engineering, Technion, 2012
-%\item Aeronautical algorithms engineer, IAF, since 2013
-%\item M.Sc student since 2014
-%\end{itemize}
-%\end{frame}
 
 %%% MOTIVATION %%%
 \subsection[Motivation]{}
@@ -159,9 +151,8 @@ Supervisor: Associate Professor Daniel Zelazo \\[1ex]
 Given an area, we want to sense what's happening inside
 
 \begin{figure}[b]
-\includegraphics[scale=0.6]{motivation/coverage.eps}
+\includegraphics[scale=0.65]{motivation/coverage.eps}
 \end{figure}
-In red - the sensing coverage.
 \end{frame}
 %%
 \begin{frame}[label=motivation2]{What Is Sensor Coverage?}
@@ -170,10 +161,10 @@ Why would we like to do that?
 \item Surveillance$^{1}$
 \item Photographing$^{1}$
 \item Exploring$^2$
-\item iRobot! $^3$
+\item iRobot!$^3$
 \end{itemize}
 
-Those are all sensing coverage problem$^{1,3}$.
+Those are all sensing coverage problem.
 
 \footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
 \footnotetext[2]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
@@ -187,7 +178,7 @@ Coverage "Radius" - how much a sensor can sense
 \includegraphics[scale=0.5]{motivation/coverage-radius.eps}
 \end{figure}
 
-In red - the sensor coverage \emph{radius}
+In red - the sensor coverage \emph{radius}.
 \end{frame}
 %%
 \begin{frame}[label=motivation4]{Partial Coverage}
@@ -240,7 +231,6 @@ Let's say that we want to maintain coverage on a specific area, due to:
 \begin{itemize}
 \item Connection to home base
 \item Maintain surveillance on a target
-\item \ldots
 \begin{figure}[b]
 \includegraphics[scale=0.4]{motivation/deployment-configuration-coverage-constraint.eps}
 \end{figure}
@@ -253,7 +243,7 @@ Dealing with partial coverage - many possible behaviours:
 \begin{itemize}
 \item Set of trajectories $^{1,2}$
 \item \emph{Tiling the area}$^{3}$
-\item \ldots
+
 \end{itemize}
 
 By choosing any strategy, a \emph{coverage controller}$^3$ must be provided.
@@ -265,12 +255,12 @@ By choosing any strategy, a \emph{coverage controller}$^3$ must be provided.
 \end{frame}
 %%
 \begin{frame}[label=motivation12]{Partitioning as a strategy}
-\emph{Partitioning} (or tiling) an area - cover a small part of the area each time.
+\emph{Partitioning} (or tiling) an area - cover a small part of the area for a set of time intervals.
 \begin{itemize}
 \item Main benefit - provide coverage of a subset of an area constantly.
 \end{itemize}
 
-Cortes et al. provided a controller that know how to partition an area and provide coverage, using Centroidal Voronoi Tessellations$^1$.
+$[$Cortes2004$]$. provided a controller that knows how to partition an area and provide coverage, using Centroidal Voronoi Tessellations$^1$.
 
 \begin{figure}[b]
 \includegraphics[scale=0.4]{motivation/partitioning.eps}
@@ -288,8 +278,8 @@ and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
 \item A sub-area $A_{m} \subset A$ must be covered always (e.g. ground station).
 \item There exist a set of \textbf{mobile} sensors $S = \left\{s_1 \ldots s_n\right\}$ located in positions $p_i(t) \in \mathbb{R}^2$ (for $i=1,\ldots,n$) at time $t$.
 \begin{itemize}
-\item The sensors can be controller with integrator dynamics $\dot{p_i}(t) = u$.
-\item Each sensor can cover an area defined as $Cover\left( p_i, t \right)$.
+\item The mobile sensors are modelled using integrator dynamics $\dot{p_i}(t) = u$.
+\item Each sensor can cover an area described by the abstract set $C_i(p_i(t)) \subset \mathbb{R}^2$.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -302,7 +292,7 @@ c\left(t\right) = \bmat{
 p_{1}^{T}\left(t\right)&\cdots&p_{n}^{T}\left(t\right)}^{T}\in\mathbb{R}^{2n}
 \end{equation*}
 \begin{itemize}
-\item The coverage of a configuration $D\left( c\left( t \right) \right) = \cap Cover\left( p_i, t \right)$.
+\item The coverage of a configuration $D\left( c\left( t \right) \right) = \cap C_i(p_i(t))$.
 \end{itemize}
 \end{itemize}
 \begin{block}{Assumption}
@@ -313,7 +303,11 @@ $D\left( c\left( t \right) \right) \subset A$ - a single configuration \emph{can
 \begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{itemize}
 \item A partition $j$ of the area $A$ is $pr_{j} \subset A$
-\item The partitioning of $A, PR\left( A \right)$, built from $n$ partitions:
+\item The partitioning of $A, PR\left( A \right)$, is a finite set built from $n$ partitions $pr_{1},\ldots,pr_n$:
+\begin{itemize}
+\item The partitions does not intersect one with each other,
+\item The union of the $n$ partitions is exactly the area $A$.
+\end{itemize}
 \begin{equation*}
 PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j} = \emptyset \textbf{ and }\cup pr_{j} = A \}
 \end{equation*}
@@ -324,7 +318,7 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \begin{problem} \label{GeneralProblem}
 \begin{enumerate}
 \item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
-\item Find a deployment controller such that for each partition $j,$ and some given time $t, A_{pr_{j}} \subseteq D\left( c\left( t \right) \right)$, assuming that the controller is in its steady state.
+\item Find a deployment controller such that for each partition $j$ and some given time $t, {pr_{j}} \subseteq D\left( c\left( t \right) \right)$, assuming that the controller is in its steady state.
 \end{enumerate}
 \end{problem}
 \end{frame}
@@ -466,9 +460,8 @@ Where:
 \begin{frame}[label=lloydsalg8]{Lloyd's Algorithm}
 \begin{itemize}
 \item This form of Lloyd's algorithm is centralized!
-\item The calculation of the Voronoi partitions converges into a local minima
+\item The calculation of the Voronoi partitions converges into a local minima and not a global one.
 \end{itemize}
-An important thing we have to remember - \\
 
 \end{frame}
 
@@ -491,12 +484,12 @@ $[$Cortes2004$]$ came up with a solution for the second issue. But what about th
 \end{frame}
 %%
 \begin{frame}[label=solproposal]{Projection}
-A possible solution - After calculating the center of mass of each cell, \emph{project} the results into $A_m$ boundaries.
+A possible solution - After calculating the center of mass of each cell, \emph{project} the results onto the set $A_m$.
 \\ \pause
 \begin{block}{Projection}
-A  linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
+A linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
 \end{block}
-We will project using Euclidean distance.
+We will project using Euclidean distance, and mark the projection of the scalar $a$ as $\textsc{proj(a)}$.
 \end{frame}
 %%
 \begin{frame}[label=solprojectionexample]{Projection example}
@@ -545,9 +538,9 @@ Assume that we have an area $A$ and some sub-area $A_m$:
 %%
 \begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
 PLA in continuous time controller form:
-\begin{equation} \label{ProjectedLloydsContol}
+\begin{equation*} \label{ProjectedLloydsContol}
 u_{i} = -k_{p}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
-\end{equation} 
+\end{equation*} 
 
 \begin{theorem}
 The projected Lloyd's Algorithm is locally asymptotically stable
@@ -604,7 +597,6 @@ List of simulations to create:
 \item<2-> What if maintaining spatial properties is also needed? \begin{itemize}
 	\item<2-> Geolocation
 	\item<2-> communications
-	\item<2-> $\ldots$
 \end{itemize}
 \item<3-> Incorporate formation control into existing algorithms!
 \end{itemize}
@@ -614,57 +606,128 @@ List of simulations to create:
 \subsection[Distance-Based Formation Control]{}
 \begin{frame}[label=distanceformation1]{Formation Control}
 The concept of distance-based formation control is well researched$^{1,2}$.
-For complete background, some prior knowledge on algebraic graph theory is needed. Let's simplify:
+
+\begin{columns}
+\column{0.5\textwidth}
 \begin{itemize}
-\item We have agents $1 \ldots n$ on positions $p_{i}$ \pause
-\item Goal - agents $i,j (i \neq j)$ will be at distance $d_{ij}$ \pause
-\item Only $\varepsilon$ agents can share information.
+\item<2-> We have agents $1 \ldots n$ on positions $p_{i}$.
+\item<3-> Only $\varepsilon$ agents can share information ("connected by edge").
+\item<4-> Goal - agents $i,j (i \neq j)$ will be at distance $d_{ij}$.
 \end{itemize}
 
-\footnotetext[1]{aura Krick, Mireille E. Broucke \& Bruce A. Francis (2009) Stabilisation of infinitesimally rigid formations of multi-robot networks, International Journal of Control, 82:3, 423-439.}
-\footnotetext[2]{K. Oh and H. Ahn, "Distance-based formation control using euclidean distance dynamics matrix: Three-agent case," Proceedings of the 2011 American Control Conference, San Francisco, CA, 2011, pp. 4810-4815.}
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics<2>[scale=0.6]{formation-control/formation-positions.eps}
+\includegraphics<3>[scale=0.6]{formation-control/rigid-formation-connections.eps}
+\includegraphics<4>[scale=0.6]{formation-control/rigid-formation-connections-dist.eps}
+\end{center}
+\end{columns}
+\footnotetext[1]{\tiny aura Krick, Mireille E. Broucke \& Bruce A. Francis (2009) Stabilisation of infinitesimally rigid formations of multi-robot networks, International Journal of Control, 82:3, 423-439.}
+\footnotetext[2]{\tiny K. Oh and H. Ahn, "Distance-based formation control using euclidean distance dynamics matrix: Three-agent case," Proceedings of the 2011 American Control Conference, San Francisco, CA, 2011, pp. 4810-4815.}
 \end{frame}
 %%
 \begin{frame}[label=distanceformation2]{Formation Control}
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=0.42]{graph-example.png}
-\end{figure}
-\end{frame}
+A formation has a potential, defined by:
+\begin{equation*}
+F(p) = \frac{1}{4}\sum_{k=1}^{\varepsilon}\left( \norm{e_k}^2 - d_{k}^{2} \right)
+\end{equation*}
+Where $e_k$ is the actual distance of edge $k$, and $d_k$ is the required distance of this edge.
 
+The proposed controller is a gradient dynamics controller:
+\begin{equation*}
+\dot{p} = -\nabla F(p)
+\end{equation*}
+
+\end{frame}
+%%
 \begin{frame}[label=distanceformation3]{Formation Control}
 For a single agent $p_i$, the controller will have the following form:
-\begin{equation}
+\begin{equation*}
     \dot{p_{i}} = -\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)
     \label{formation controller}
-\end{equation}
-This controller is locally asymptotically stable.
+\end{equation*}
+
+To prove stability - we will once again use the direct Lyapunov method. This time, with the potential function as the candidate Lyapunov function.
+
 \end{frame}
 
-
-\begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
-As both of the controllers are convex, we propose to simply combine them with some coefficient:\\
-\begin{equation}
+%%% Lloyd's and formation %%%
+\subsection[Lloyd's Algorithm and Formation Control]{}
+\begin{frame}[label=lloydsandformation1]{Lloyd's Algorithm and Formation Control}
+Both Lloyd's algorithm controller and distance based formation controller:
+\begin{itemize}
+\item Locally asymptotically stable.
+\item Gradient descent controllers.
+\end{itemize} 
+We propose to simply combine them with some coefficient $0 \leq \alpha \leq 1$:
+\begin{align*}
     u_{i} = \alpha \left(-k_{p}\left( p_i -C_{V_{i}} \right)\right) +
     \left( 1-\alpha \right)\left[-\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)  \right] 
     \label{Combined Controller}
-\end{equation}\pause
+\end{align*}
+\end{frame}
+%%
+\begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
 \begin{theorem}
 The combined controller is Locally Asymptotically Stable
 \end{theorem}
-\end{frame}
 
-\begin{frame}[label=lloydsandformation3]{Lloyd's Algorithm and Formation Control}
-How to prove:
+To prove this, using a direct Lyapunov function, use the following candidate Lyapunov function:
+\begin{align*}
+        V_{c}\left(P\right) &= \alpha\left[ \sum_{i=1}^{n} J_{V_i,C_{V_i}} + \sum_{i=1}^{n} M_{V_i} \norm{p_i - C_{V_i}}^2 \right] +\\
+        &(1-\alpha) \left[ \frac{1}{4}\sum_{k=1}^{\varepsilon}\left( \norm{e_k}^2 - d_{k}^{2} \right) \right]
+\end{align*}
+
+* In the same way, we can show it works with the PLA.
+\end{frame}
+%%
+\begin{frame}[label=lloydsandformation3]{"Disclaimer"}
+\begin{alertblock}{Notice!}
+We do not supply a condition to both maintain the required spatial formation \textbf{and} the original problem requirements.
+\end{alertblock}
+\end{frame}
+%%% Problem simulations %%%
+\subsection[Simulations]{}
+\begin{frame}[label=sl3]{Some Simulation}
+List of simulations to create:
 \begin{itemize}
-\item Pretty long and technical, based on Lyapunov function.
-\item We know the Lyapunov function of each controller - Let's combine!
-\item After long calculations, we can show using the Lyapunov direct method that this controller is locally asymptotically stable.
-\item In the same way, we can show it works with the PLA.
+\item some simulations
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% CONCLUSIONS %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section[Conclusions]{Conclusions}
+\subsection[Conclusions]{}
+\begin{frame}[label=conclusions]{Conclusions}
+\begin{itemize}
+\item A centralized method for covering an area with sub-area constraint was introduced.
+\item The method is locally asymptotically stable.
+\item It is possible to combine Lloyd's algorithm with distance-based formation control to achieve spatial properties.
+\end{itemize}
+\end{frame}
+%%
+\subsection[Future Work]{}
+\begin{frame}[label=futurework]{Future Work}
+\begin{itemize}
+\item Distributed version.
+\item Developing the combination of formation controller and Lloyd's algorithm.
+\end{itemize}
+\end{frame}
+%%
+\subsection[Acknowledgements]{}
+\begin{frame}[label=acknowledgements]{Acknowledgements}
+\begin{itemize}
+\item Associate Professor Daniel Zelazo
+\end{itemize} \pause
+This work will be presented at the 59'th Israel Annual Conference on Aerospace Sciences
+\end{frame}
+%%
+\subsection[Thank you]{}
+\begin{frame}{}
+  \centering \Large
+  \emph{Thank you}
+\end{frame}
 \end{document}
-
-
