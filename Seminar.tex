@@ -164,21 +164,19 @@ Why would we like to do that?
 \item iRobot!$^3$
 \end{itemize}
 
-Those are all sensing coverage problem.
-
 \footnotetext[1]{\tiny Nigam, N., Bieniawski, S., Kroo, I., \& Vian, J. (2012). Control of multiple UAVs for persistent surveillance: Algorithm and flight test results. IEEE Transactions on Control Systems Technology, 20(5), 1236–1251.}
 \footnotetext[2]{\tiny Loizou, S. G., \& Constantinou, C. C. (2016). Multi-Robot Coverage on Dendritic Topologies Under Communication Constraints, (Cdc).}
 \footnotetext[3]{\tiny Montijano, E., Sagues, C., \& Llorente, S. (2016). Multi-Robot Persistent Coverage with Optimal Times, (Cdc), 3511–3517.}
 \end{frame}
 %%
 \begin{frame}[label=motivation3]{What Is Sensor Coverage?}
-Coverage "Radius" - how much a sensor can sense
+Coverage "Capability" - how much a sensor can sense
 
 \begin{figure}[b]
 \includegraphics[scale=0.5]{motivation/coverage-radius.eps}
 \end{figure}
 
-In red - the sensor coverage \emph{radius}.
+In red - the sensor coverage \emph{Capability}. Most of the models the coverage capability as a circular area, thus coverage \emph{radius}.
 \end{frame}
 %%
 \begin{frame}[label=motivation4]{Partial Coverage}
@@ -318,7 +316,7 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \begin{problem} \label{GeneralProblem}
 \begin{enumerate}
 \item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
-\item Find a deployment controller such that for each partition $j$ and some given time $t, {pr_{j}} \subseteq D\left( c\left( t \right) \right)$, assuming that the controller is in its steady state.
+\item Find a deployment controller, that for a given partition $pr_j$ and a steady state time $t_s$, $D\left( c\left( t_s \right) \right) \supseteq pr_j$
 \end{enumerate}
 \end{problem}
 \end{frame}
@@ -335,6 +333,10 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \begin{center}
 A little story about a town, a city planner and post offices...
 \end{center}
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{background/israelpost-logo.png}
+\end{figure}
 \end{frame}
 %%
 \begin{frame}[label=vorpart2]{Voronoi Partitioning}
@@ -356,7 +358,10 @@ Circles - generators, crosses - some point inside the appropriate partition.
 \begin{frame}[label=centvorpart1]{Central Voronoi Tessellations}
 \begin{center}
 Let's get back to our city planner.
-%\includegraphics[scale=0.5]{central-Voronoi-example.png}
+\begin{figure}
+\centering
+\includegraphics[scale=0.05]{background/sketch.jpg}
+\end{figure}
 \end{center}
 \end{frame}
 %%
@@ -423,7 +428,7 @@ Almost converged...
 \end{frame}
 %%
 \begin{frame}[label=lloydsalg5]{Lloyd's Algorithm}
-After n iterations:
+Asymptotically convergence to CVT:
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{background/cvt-calc-stepn.eps}
@@ -456,14 +461,6 @@ Where:
 \item $M_{V_i}$ - the $i$'th partition "mass"
 \end{itemize}
 \end{frame}
-%%
-\begin{frame}[label=lloydsalg8]{Lloyd's Algorithm}
-\begin{itemize}
-\item This form of Lloyd's algorithm is centralized!
-\item The calculation of the Voronoi partitions converges into a local minima and not a global one.
-\end{itemize}
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% PROBLEM SOLUTION %%%%%%%%%%%
@@ -486,10 +483,10 @@ $[$Cortes2004$]$ came up with a solution for the second issue. But what about th
 \begin{frame}[label=solproposal]{Projection}
 A possible solution - After calculating the center of mass of each cell, \emph{project} the results onto the set $A_m$.
 \\ \pause
-\begin{block}{Projection}
+\begin{block}{Projection - Definition}
 A linear transformation $P$ from a vector space to itself such as $P^2 = P$. In other words, the transformation $P$ is idempotent.
 \end{block}
-We will project using Euclidean distance, and mark the projection of the scalar $a$ as $\textsc{proj(a)}$.
+We will project using Euclidean distance, and mark the projection of the scalar $a$ as $\textsc{proj}(a)$.
 \end{frame}
 %%
 \begin{frame}[label=solprojectionexample]{Projection example}
@@ -539,7 +536,7 @@ Assume that we have an area $A$ and some sub-area $A_m$:
 \begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
 PLA in continuous time controller form:
 \begin{equation*} \label{ProjectedLloydsContol}
-u_{i} = -k_{p}\left( p_i - \textit{proj}\left( C_{V_{i}} \right) \right)
+u_{i} = -k_{p}\left( p_i - \textsc{proj}\left( C_{V_{i}} \right) \right)
 \end{equation*} 
 
 \begin{theorem}
@@ -574,6 +571,15 @@ Therefore, we are ready for the problem solution algorithm...
 \end{algorithm}
 \end{frame}
 
+%%
+\begin{frame}[label=planotice]{Some Characteristics}
+\begin{itemize}
+\item This form of PLA (and also Lloyd's algorithm) is centralized!
+\item The calculation of the Voronoi partitions converges into a local minima and not a global one.
+\item Lloyd's algorithm A converges into a local minima. PLA \emph{isn't} an optimal solution!
+\end{itemize}
+
+\end{frame}
 %%% Problem simulations %%%
 \subsection[Simulations]{}
 \begin{frame}[label=sl3]{Some Simulation}
@@ -622,8 +628,8 @@ The concept of distance-based formation control is well researched$^{1,2}$.
 \includegraphics<4>[scale=0.6]{formation-control/rigid-formation-connections-dist.eps}
 \end{center}
 \end{columns}
-\footnotetext[1]{\tiny aura Krick, Mireille E. Broucke \& Bruce A. Francis (2009) Stabilisation of infinitesimally rigid formations of multi-robot networks, International Journal of Control, 82:3, 423-439.}
-\footnotetext[2]{\tiny K. Oh and H. Ahn, "Distance-based formation control using euclidean distance dynamics matrix: Three-agent case," Proceedings of the 2011 American Control Conference, San Francisco, CA, 2011, pp. 4810-4815.}
+\footnotetext[1]{\tiny L. Krick, M.E. Broucke \& B.A. Francis (2009) Stabilisation of infinitesimally rigid formations of multi-robot networks, International Journal of Control, 82:3, 423-439.}
+\footnotetext[2]{\tiny K. Oh \& H. Ahn, "Distance-based formation control using euclidean distance dynamics matrix: Three-agent case," Proceedings of the 2011 American Control Conference, San Francisco, CA, 2011, pp. 4810-4815.}
 \end{frame}
 %%
 \begin{frame}[label=distanceformation2]{Formation Control}
@@ -660,11 +666,11 @@ Both Lloyd's algorithm controller and distance based formation controller:
 \item Gradient descent controllers.
 \end{itemize} 
 We propose to simply combine them with some coefficient $0 \leq \alpha \leq 1$:
-\begin{align*}
+\begin{align}
     u_{i} = \alpha \left(-k_{p}\left( p_i -C_{V_{i}} \right)\right) +
     \left( 1-\alpha \right)\left[-\sum_{i \sim j} \left( \norm{p_{i} - p_{j}}^{2} - d_{ij}^2 \right) \left( p_{i} - p_{j} \right)  \right] 
     \label{Combined Controller}
-\end{align*}
+\end{align}
 \end{frame}
 %%
 \begin{frame}[label=lloydsandformation2]{Lloyd's Algorithm and Formation Control}
@@ -685,6 +691,12 @@ To prove this, using a direct Lyapunov function, use the following candidate Lya
 \begin{alertblock}{Notice!}
 We do not supply a condition to both maintain the required spatial formation \textbf{and} the original problem requirements.
 \end{alertblock}
+
+Moreover, Since this problem is highly non-linear, it is hard to characterize what are the equilibrium points.
+\pause
+\begin{Proposition}
+Let us assume that there exists a (CVT) with $C_{V_{i}}$ such that $\forall i \neq j, \norm{C_{V_{i}} - C_{V_{j}}}^{2} = d_{ij}^{2}$. Then, there exists an equilibrium such that $p_{i} = C_{V_{i}}$, which is locally asymptotically stable with the "combined controller" dynamics.
+\end{Proposition}
 \end{frame}
 %%% Problem simulations %%%
 \subsection[Simulations]{}
@@ -703,8 +715,11 @@ List of simulations to create:
 \subsection[Conclusions]{}
 \begin{frame}[label=conclusions]{Conclusions}
 \begin{itemize}
-\item A centralized method for covering an area with sub-area constraint was introduced.
+\item A modified algorithm for partitioning an area with sub-area constraint was introduced (PLA).
+\begin{itemize}
+\item A centralized method.
 \item The method is locally asymptotically stable.
+\end{itemize}
 \item It is possible to combine Lloyd's algorithm with distance-based formation control to achieve spatial properties.
 \end{itemize}
 \end{frame}
