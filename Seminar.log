@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  9 DEC 2018 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  9 DEC 2018 23:47
 entering extended mode
 **./Seminar.tex
 (Seminar.tex
@@ -996,10 +996,10 @@ LaTeX Warning: Label `probformulation2<1>' multiply defined.
 LaTeX Warning: Label `probformulation2' multiply defined.
 
 
-LaTeX Warning: Label `sl3<1>' multiply defined.
+LaTeX Warning: Label `plasim2<1>' multiply defined.
 
 
-LaTeX Warning: Label `sl3' multiply defined.
+LaTeX Warning: Label `plasim2' multiply defined.
 
 )
 \openout1 = `Seminar.aux'.
@@ -1116,7 +1116,7 @@ Package caption Info: End \AtBeginDocument code.
  (Seminar.nav)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<Figures/lapid-logo-45.pdf, id=156, 290.0469pt x 380.37297pt>
+<Figures/lapid-logo-45.pdf, id=163, 290.0469pt x 380.37297pt>
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
 Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 134.
@@ -1155,7 +1155,7 @@ to.pdf>
 -eps-converted-to.pdf Figures/motivation/coverage.eps>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/coverage-eps-converted-to.pdf, id=377, 393.47pt x 239.89626
+<Figures/motivation/coverage-eps-converted-to.pdf, id=393, 393.47pt x 239.89626
 pt>
 File: Figures/motivation/coverage-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/motivation/coverage-eps-converted-to.pdf>
@@ -1212,7 +1212,7 @@ verted-to.pdf>
 -radius-eps-converted-to.pdf Figures/motivation/coverage-radius.eps>
 (epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/coverage-radius-eps-converted-to.pdf, id=521, 393.47pt x 23
+<Figures/motivation/coverage-radius-eps-converted-to.pdf, id=543, 393.47pt x 23
 5.88126pt>
 File: Figures/motivation/coverage-radius-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -1239,7 +1239,7 @@ nverted-to.pdf>
 coverage-eps-converted-to.pdf Figures/motivation/partial-coverage.eps>
 (epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/partial-coverage-eps-converted-to.pdf, id=595, 530.98375pt 
+<Figures/motivation/partial-coverage-eps-converted-to.pdf, id=620, 530.98375pt 
 x 317.185pt>
 File: Figures/motivation/partial-coverage-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -1267,7 +1267,7 @@ coverage-to-full-eps-converted-to.pdf Figures/motivation/partial-coverage-to-fu
 ll.eps>
 (epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf, id=667, 530.
+<Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf, id=695, 530.
 98375pt x 317.185pt>
 File: Figures/motivation/partial-coverage-to-full-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1295,7 +1295,7 @@ nt-configuration-eps-converted-to.pdf Figures/motivation/deployment-configurati
 on.eps>
 (epstopdf)             \includegraphics on input line 207.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/deployment-configuration-eps-converted-to.pdf, id=739, 475.
+<Figures/motivation/deployment-configuration-eps-converted-to.pdf, id=770, 475.
 7775pt x 215.80624pt>
 File: Figures/motivation/deployment-configuration-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1324,7 +1324,7 @@ eployment-configuration-partial-full-example.eps>
 (epstopdf)             \includegraphics on input line 216.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/motivation/deployment-configuration-partial-full-example-eps-converted
--to.pdf, id=808, 475.7775pt x 215.80624pt>
+-to.pdf, id=842, 475.7775pt x 215.80624pt>
 File: Figures/motivation/deployment-configuration-partial-full-example-eps-conv
 erted-to.pdf Graphic file (type pdf)
 <use Figures/motivation/deployment-configuration-partial-full-example-eps-conve
@@ -1354,7 +1354,7 @@ ion/deployment-configuration-partial-no-enough-sensors.eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps-conv
-erted-to.pdf, id=877, 475.7775pt x 215.80624pt>
+erted-to.pdf, id=914, 475.7775pt x 215.80624pt>
 File: Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps
 -converted-to.pdf Graphic file (type pdf)
 <use Figures/motivation/deployment-configuration-partial-no-enough-sensors-eps-
@@ -1384,7 +1384,7 @@ ployment-configuration-coverage-constraint.eps>
 (epstopdf)             \includegraphics on input line 237.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/motivation/deployment-configuration-coverage-constraint-eps-converted-
-to.pdf, id=946, 202.7575pt x 215.80624pt>
+to.pdf, id=986, 202.7575pt x 215.80624pt>
 File: Figures/motivation/deployment-configuration-coverage-constraint-eps-conve
 rted-to.pdf Graphic file (type pdf)
 <use Figures/motivation/deployment-configuration-coverage-constraint-eps-conver
@@ -1419,7 +1419,7 @@ ted-to.pdf>
 ning-eps-converted-to.pdf Figures/motivation/partitioning.eps>
 (epstopdf)             \includegraphics on input line 269.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/motivation/partitioning-eps-converted-to.pdf, id=1083, 216.81pt x 196.
+<Figures/motivation/partitioning-eps-converted-to.pdf, id=1129, 216.81pt x 196.
 735pt>
 File: Figures/motivation/partitioning-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1496,7 +1496,7 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 334.
  [21
 
 ]
-<Figures/background/israelpost-logo.png, id=1561, 2569.6pt x 1101.11375pt>
+<Figures/background/israelpost-logo.png, id=1628, 2569.6pt x 1101.11375pt>
 File: Figures/background/israelpost-logo.png Graphic file (type png)
 <use Figures/background/israelpost-logo.png>
 Package pdftex.def Info: Figures/background/israelpost-logo.png  used on input 
@@ -1527,7 +1527,7 @@ verted-to.pdf>
 example-eps-converted-to.pdf Figures/background/Voronoi-example.eps>
 (epstopdf)             \includegraphics on input line 362.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/background/Voronoi-example-eps-converted-to.pdf, id=1697, 322.20375pt 
+<Figures/background/Voronoi-example-eps-converted-to.pdf, id=1770, 322.20375pt 
 x 257.96375pt>
 File: Figures/background/Voronoi-example-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -1542,7 +1542,7 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 362.
  [24
 
  <./Figures/background/Voronoi-example-eps-converted-to.pdf>]
-<Figures/background/sketch.jpg, id=1766, 4769.82pt x 3179.88pt>
+<Figures/background/sketch.jpg, id=1842, 4769.82pt x 3179.88pt>
 File: Figures/background/sketch.jpg Graphic file (type jpg)
 <use Figures/background/sketch.jpg>
 Package pdftex.def Info: Figures/background/sketch.jpg  used on input line 372.
@@ -1562,7 +1562,7 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 386.
  [26
 
 ]
-<Figures/background/central-Voronoi-example.png, id=1901, 421.575pt x 316.18124
+<Figures/background/central-Voronoi-example.png, id=1983, 421.575pt x 316.18124
 pt>
 File: Figures/background/central-Voronoi-example.png Graphic file (type png)
 <use Figures/background/central-Voronoi-example.png>
@@ -1594,7 +1594,7 @@ erted-to.pdf>
 -step1-eps-converted-to.pdf Figures/background/cvt-calc-step1.eps>
 (epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/background/cvt-calc-step1-eps-converted-to.pdf, id=2035, 421.575pt x 3
+<Figures/background/cvt-calc-step1-eps-converted-to.pdf, id=2123, 421.575pt x 3
 16.18124pt>
 File: Figures/background/cvt-calc-step1-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1620,7 +1620,7 @@ erted-to.pdf>
 -step2-eps-converted-to.pdf Figures/background/cvt-calc-step2.eps>
 (epstopdf)             \includegraphics on input line 425.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/background/cvt-calc-step2-eps-converted-to.pdf, id=2105, 421.575pt x 3
+<Figures/background/cvt-calc-step2-eps-converted-to.pdf, id=2196, 421.575pt x 3
 16.18124pt>
 File: Figures/background/cvt-calc-step2-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1647,7 +1647,7 @@ Package epstopdf Info: Source file: <Figures/background/cvt-calc-step2-zoom.eps
 -step2-zoom-eps-converted-to.pdf Figures/background/cvt-calc-step2-zoom.eps>
 (epstopdf)             \includegraphics on input line 434.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/background/cvt-calc-step2-zoom-eps-converted-to.pdf, id=2175, 421.575p
+<Figures/background/cvt-calc-step2-zoom-eps-converted-to.pdf, id=2269, 421.575p
 t x 316.18124pt>
 File: Figures/background/cvt-calc-step2-zoom-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1673,7 +1673,7 @@ erted-to.pdf>
 -stepn-eps-converted-to.pdf Figures/background/cvt-calc-stepn.eps>
 (epstopdf)             \includegraphics on input line 442.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/background/cvt-calc-stepn-eps-converted-to.pdf, id=2246, 421.575pt x 3
+<Figures/background/cvt-calc-stepn-eps-converted-to.pdf, id=2343, 421.575pt x 3
 16.18124pt>
 File: Figures/background/cvt-calc-stepn-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1688,7 +1688,7 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 442.
  [32
 
  <./Figures/background/cvt-calc-stepn-eps-converted-to.pdf>]
-<Figures/background/Lloyds-alg-from-cortes.png, id=2316, 744.53156pt x 203.2593
+<Figures/background/Lloyds-alg-from-cortes.png, id=2416, 744.53156pt x 203.2593
 7pt>
 File: Figures/background/Lloyds-alg-from-cortes.png Graphic file (type png)
 <use Figures/background/Lloyds-alg-from-cortes.png>
@@ -1762,7 +1762,7 @@ ojection-before-eps-converted-to.pdf Figures/Problem-solution/projection-before
 .eps>
 (epstopdf)             \includegraphics on input line 504.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Problem-solution/projection-before-eps-converted-to.pdf, id=2785, 342.
+<Figures/Problem-solution/projection-before-eps-converted-to.pdf, id=2906, 342.
 27875pt x 227.85126pt>
 File: Figures/Problem-solution/projection-before-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1790,7 +1790,7 @@ ojection-after-eps-converted-to.pdf Figures/Problem-solution/projection-after.e
 ps>
 (epstopdf)             \includegraphics on input line 504.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Problem-solution/projection-after-eps-converted-to.pdf, id=2855, 342.2
+<Figures/Problem-solution/projection-after-eps-converted-to.pdf, id=2979, 342.2
 7875pt x 227.85126pt>
 File: Figures/Problem-solution/projection-after-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1826,7 +1826,7 @@ A-example-empty-eps-converted-to.pdf Figures/Problem-solution/PLA-example-empty
 .eps>
 (epstopdf)             \includegraphics on input line 524.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Problem-solution/PLA-example-empty-eps-converted-to.pdf, id=2990, 421.
+<Figures/Problem-solution/PLA-example-empty-eps-converted-to.pdf, id=3120, 421.
 575pt x 316.18124pt>
 File: Figures/Problem-solution/PLA-example-empty-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1858,7 +1858,7 @@ oj-lloyds-off-eps-converted-to.pdf Figures/Problem-solution/proj-lloyds-off.eps
 >
 (epstopdf)             \includegraphics on input line 540.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Problem-solution/proj-lloyds-off-eps-converted-to.pdf, id=3064, 421.57
+<Figures/Problem-solution/proj-lloyds-off-eps-converted-to.pdf, id=3197, 421.57
 5pt x 316.18124pt>
 File: Figures/Problem-solution/proj-lloyds-off-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1883,7 +1883,7 @@ s-converted-to.pdf>
 oj-lloyds-on-eps-converted-to.pdf Figures/Problem-solution/proj-lloyds-on.eps>
 (epstopdf)             \includegraphics on input line 540.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Problem-solution/proj-lloyds-on-eps-converted-to.pdf, id=3065, 421.575
+<Figures/Problem-solution/proj-lloyds-on-eps-converted-to.pdf, id=3198, 421.575
 pt x 316.18124pt>
 File: Figures/Problem-solution/proj-lloyds-on-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1933,39 +1933,99 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 588.
 [48
 
 ]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 598.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [49
+Package epstopdf Info: Source file: <Figures/sim/sim1-3agents-3partitions-noPLA
+.eps>
+(epstopdf)                    date: 2018-12-09 22:20:29
+(epstopdf)                    size: 41735 bytes
+(epstopdf)             Output file: <Figures/sim/sim1-3agents-3partitions-noPLA
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:26:44
+(epstopdf)                    size: 37748 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim1-3agents-3p
+artitions-noPLA-eps-converted-to.pdf Figures/sim/sim1-3agents-3partitions-noPLA
+.eps>
+(epstopdf)             \includegraphics on input line 597.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf, id=3558, 563.
+10374pt x 172.645pt>
+File: Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf Graphic f
+ile (type pdf)
+<use Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim1-3agents-3partitions-noPLA-eps-convert
+ed-to.pdf  used on input line 597.
+(pdftex.def)             Requested size: 337.86485pt x 103.58778pt.
 
-]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 615.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [50
+Overfull \hbox (30.57498pt too wide) in paragraph at lines 597--597
+ [] 
+ []
 
-]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 615.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 597.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[49
+
+ <./Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/sim/sim2-3agents-3partitions-PLA.e
+ps>
+(epstopdf)                    date: 2018-12-09 23:25:04
+(epstopdf)                    size: 40579 bytes
+(epstopdf)             Output file: <Figures/sim/sim2-3agents-3partitions-PLA-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:26:46
+(epstopdf)                    size: 35247 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim2-3agents-3p
+artitions-PLA-eps-converted-to.pdf Figures/sim/sim2-3agents-3partitions-PLA.eps
+>
+(epstopdf)             \includegraphics on input line 605.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf, id=3635, 562.1p
+t x 171.64125pt>
+File: Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf Graphic fil
+e (type pdf)
+<use Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim2-3agents-3partitions-PLA-eps-converted
+-to.pdf  used on input line 605.
+(pdftex.def)             Requested size: 337.2626pt x 102.98552pt.
+
+Overfull \hbox (29.97273pt too wide) in paragraph at lines 605--605
+ [] 
+ []
+
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 605.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[50
+
+ <./Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf>]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 622.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [51
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 615.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 622.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [52
+
+[52
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 639.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 622.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [53
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 646.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [54
 
 ]
 Package epstopdf Info: Source file: <Figures/formation-control/formation-positi
@@ -1979,21 +2039,21 @@ ons-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/formation-control/f
 ormation-positions-eps-converted-to.pdf Figures/formation-control/formation-pos
 itions.eps>
-(epstopdf)             \includegraphics on input line 639.
+(epstopdf)             \includegraphics on input line 646.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/formation-control/formation-positions-eps-converted-to.pdf, id=3742, 2
+<Figures/formation-control/formation-positions-eps-converted-to.pdf, id=3988, 2
 34.8775pt x 168.63pt>
 File: Figures/formation-control/formation-positions-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Figures/formation-control/formation-positions-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/formation-control/formation-positions-eps-conv
-erted-to.pdf  used on input line 639.
+erted-to.pdf  used on input line 646.
 (pdftex.def)             Requested size: 140.92758pt x 101.17877pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 639.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 646.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [54
+ [55
 
  <./Figures/formation-control/formation-positions-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/formation-control/rigid-formation-
@@ -2007,22 +2067,22 @@ connections-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/formation-control/r
 igid-formation-connections-eps-converted-to.pdf Figures/formation-control/rigid
 -formation-connections.eps>
-(epstopdf)             \includegraphics on input line 639.
+(epstopdf)             \includegraphics on input line 646.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/formation-control/rigid-formation-connections-eps-converted-to.pdf, id
-=3817, 234.8775pt x 168.63pt>
+=4067, 234.8775pt x 168.63pt>
 File: Figures/formation-control/rigid-formation-connections-eps-converted-to.pd
 f Graphic file (type pdf)
 <use Figures/formation-control/rigid-formation-connections-eps-converted-to.pdf
 >
 Package pdftex.def Info: Figures/formation-control/rigid-formation-connections-
-eps-converted-to.pdf  used on input line 639.
+eps-converted-to.pdf  used on input line 646.
 (pdftex.def)             Requested size: 140.92758pt x 101.17877pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 639.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 646.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [55
+ [56
 
  <./Figures/formation-control/rigid-formation-connections-eps-converted-to.pdf>
 ]
@@ -2037,128 +2097,282 @@ connections-dist-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/formation-control/r
 igid-formation-connections-dist-eps-converted-to.pdf Figures/formation-control/
 rigid-formation-connections-dist.eps>
-(epstopdf)             \includegraphics on input line 639.
+(epstopdf)             \includegraphics on input line 646.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/formation-control/rigid-formation-connections-dist-eps-converted-to.pd
-f, id=3893, 234.8775pt x 168.63pt>
+f, id=4145, 234.8775pt x 168.63pt>
 File: Figures/formation-control/rigid-formation-connections-dist-eps-converted-
 to.pdf Graphic file (type pdf)
 <use Figures/formation-control/rigid-formation-connections-dist-eps-converted-t
 o.pdf>
 Package pdftex.def Info: Figures/formation-control/rigid-formation-connections-
-dist-eps-converted-to.pdf  used on input line 639.
+dist-eps-converted-to.pdf  used on input line 646.
 (pdftex.def)             Requested size: 140.92758pt x 101.17877pt.
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 639.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 646.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [56
+ [57
 
  <./Figures/formation-control/rigid-formation-connections-dist-eps-converted-to
 .pdf>]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 653.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [57
-
-]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 664.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 660.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [58
 
 ]
-Overfull \hbox (21.48807pt too wide) detected at line 680
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 671.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [59
+
+]
+Overfull \hbox (21.48807pt too wide) detected at line 687
 []
  []
 
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 680.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 687.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
-[59
+[60
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 694.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [60
-
-]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 706.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 701.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [61
 
 ]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 706.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 713.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [62
 
-]pdfTeX warning (ext4): destination with the same identifier (name{sl3<1>}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.714 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{sl3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.714 \end{frame}
-                 
+]
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 714.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 713.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [63
 
-] (Seminar.toc)
+]
+Package epstopdf Info: Source file: <Figures/sim/sim-formationshape.eps>
+(epstopdf)                    date: 2018-12-09 23:33:56
+(epstopdf)                    size: 17959 bytes
+(epstopdf)             Output file: <Figures/sim/sim-formationshape-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:41:21
+(epstopdf)                    size: 15379 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim-formationsh
+ape-eps-converted-to.pdf Figures/sim/sim-formationshape.eps>
+(epstopdf)             \includegraphics on input line 723.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/sim/sim-formationshape-eps-converted-to.pdf, id=4639, 421.575pt x 316.
+18124pt>
+File: Figures/sim/sim-formationshape-eps-converted-to.pdf Graphic file (type pd
+f)
+<use Figures/sim/sim-formationshape-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim-formationshape-eps-converted-to.pdf  u
+sed on input line 723.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+
+Overfull \vbox (3.37384pt too high) detected at line 723
+ []
+
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 720.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 723.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [64
+[64
 
-]
+ <./Figures/sim/sim-formationshape-eps-converted-to.pdf>]pdfTeX warning (ext4):
+ destination with the same identifier (name{plasim2<1>}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.732 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{plasim2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.732 \end{frame}
+                 
+Package epstopdf Info: Source file: <Figures/sim/sim1-3agents-3partitions-noPLA
+.eps>
+(epstopdf)                    date: 2018-12-09 22:20:29
+(epstopdf)                    size: 41735 bytes
+(epstopdf)             Output file: <Figures/sim/sim1-3agents-3partitions-noPLA
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:26:44
+(epstopdf)                    size: 37748 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim1-3agents-3p
+artitions-noPLA-eps-converted-to.pdf Figures/sim/sim1-3agents-3partitions-noPLA
+.eps>
+(epstopdf)             \includegraphics on input line 732.
+Package epstopdf Info: Output file is already uptodate.
+File: Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf Graphic f
+ile (type pdf)
+<use Figures/sim/sim1-3agents-3partitions-noPLA-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim1-3agents-3partitions-noPLA-eps-convert
+ed-to.pdf  used on input line 732.
+(pdftex.def)             Requested size: 337.86485pt x 103.58778pt.
+
+Overfull \hbox (30.57498pt too wide) in paragraph at lines 732--732
+ [] 
+ []
+
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 731.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 732.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [65
+[65
 
 ]
+Package epstopdf Info: Source file: <Figures/sim/sim3-3agents-3partitions-noPLA
+-formation.eps>
+(epstopdf)                    date: 2018-12-09 23:40:10
+(epstopdf)                    size: 40580 bytes
+(epstopdf)             Output file: <Figures/sim/sim3-3agents-3partitions-noPLA
+-formation-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:41:24
+(epstopdf)                    size: 36547 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim3-3agents-3p
+artitions-noPLA-formation-eps-converted-to.pdf Figures/sim/sim3-3agents-3partit
+ions-noPLA-formation.eps>
+(epstopdf)             \includegraphics on input line 732.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/sim/sim3-3agents-3partitions-noPLA-formation-eps-converted-to.pdf, id=
+4783, 562.1pt x 171.64125pt>
+File: Figures/sim/sim3-3agents-3partitions-noPLA-formation-eps-converted-to.pdf
+ Graphic file (type pdf)
+<use Figures/sim/sim3-3agents-3partitions-noPLA-formation-eps-converted-to.pdf>
+
+Package pdftex.def Info: Figures/sim/sim3-3agents-3partitions-noPLA-formation-e
+ps-converted-to.pdf  used on input line 732.
+(pdftex.def)             Requested size: 337.2626pt x 102.98552pt.
+
+Overfull \hbox (29.97273pt too wide) in paragraph at lines 732--732
+ [] 
+ []
+
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 739.
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 732.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [66
+[66
+
+ <./Figures/sim/sim3-3agents-3partitions-noPLA-formation-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figures/sim/sim2-3agents-3partitions-PLA.e
+ps>
+(epstopdf)                    date: 2018-12-09 23:25:04
+(epstopdf)                    size: 40579 bytes
+(epstopdf)             Output file: <Figures/sim/sim2-3agents-3partitions-PLA-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:26:46
+(epstopdf)                    size: 35247 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim2-3agents-3p
+artitions-PLA-eps-converted-to.pdf Figures/sim/sim2-3agents-3partitions-PLA.eps
+>
+(epstopdf)             \includegraphics on input line 741.
+Package epstopdf Info: Output file is already uptodate.
+File: Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf Graphic fil
+e (type pdf)
+<use Figures/sim/sim2-3agents-3partitions-PLA-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim2-3agents-3partitions-PLA-eps-converted
+-to.pdf  used on input line 741.
+(pdftex.def)             Requested size: 337.2626pt x 102.98552pt.
+
+Overfull \hbox (29.97273pt too wide) in paragraph at lines 741--741
+ [] 
+ []
+
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 741.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[67
 
 ]
+Package epstopdf Info: Source file: <Figures/sim/sim4-3agents-3partitions-PLA-f
+ormation.eps>
+(epstopdf)                    date: 2018-12-09 23:33:06
+(epstopdf)                    size: 40167 bytes
+(epstopdf)             Output file: <Figures/sim/sim4-3agents-3partitions-PLA-f
+ormation-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-09 23:41:30
+(epstopdf)                    size: 35735 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/sim/sim4-3agents-3p
+artitions-PLA-formation-eps-converted-to.pdf Figures/sim/sim4-3agents-3partitio
+ns-PLA-formation.eps>
+(epstopdf)             \includegraphics on input line 741.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/sim/sim4-3agents-3partitions-PLA-formation-eps-converted-to.pdf, id=49
+29, 562.1pt x 171.64125pt>
+File: Figures/sim/sim4-3agents-3partitions-PLA-formation-eps-converted-to.pdf G
+raphic file (type pdf)
+<use Figures/sim/sim4-3agents-3partitions-PLA-formation-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/sim/sim4-3agents-3partitions-PLA-formation-eps
+-converted-to.pdf  used on input line 741.
+(pdftex.def)             Requested size: 337.2626pt x 102.98552pt.
+
+Overfull \hbox (29.97273pt too wide) in paragraph at lines 741--741
+ [] 
+ []
+
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 741.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+[68
+
+ <./Figures/sim/sim4-3agents-3partitions-PLA-formation-eps-converted-to.pdf>] (
+Seminar.toc)
 File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
 <use Figures/lapid-logo-45.pdf>
 Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 747.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [67
-
-]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 747.
-(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
- [68
-
-]
-File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
-<use Figures/lapid-logo-45.pdf>
-Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 753.
 (pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
  [69
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 758.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [70
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 766.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [71
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 774.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [72
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 774.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [73
+
+]
+File: Figures/lapid-logo-45.pdf Graphic file (type pdf)
+<use Figures/lapid-logo-45.pdf>
+Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 780.
+(pdftex.def)             Requested size: 12.75018pt x 16.71556pt.
+ [74
 
 ]
 \tf@nav=\write6
@@ -2170,23 +2384,23 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 753.
 \tf@snm=\write8
 \openout8 = `Seminar.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 754.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 754.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 781.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 781.
  (Seminar.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 754.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 754.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 781.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 781.
 Package rerunfilecheck Info: File `Seminar.out' has not changed.
-(rerunfilecheck)             Checksum: C22ADEADD6357CBC94DBAAE65D6A9F36;1180.
+(rerunfilecheck)             Checksum: BDD2D16EA7BB7E0A1711B85844B57C20;1243.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24848 strings out of 492973
- 493056 string characters out of 3135932
- 611454 words of memory out of 3000000
- 27831 multiletter control sequences out of 15000+200000
+ 24938 strings out of 492973
+ 495834 string characters out of 3135932
+ 614974 words of memory out of 3000000
+ 27895 multiletter control sequences out of 15000+200000
  20907 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,20n,65p,776b,917s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2208,9 +2422,9 @@ ic/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Seminar.pdf (69 pages, 8266514 bytes).
+Output written on Seminar.pdf (74 pages, 8525105 bytes).
 PDF statistics:
- 4951 PDF objects out of 5155 (max. 8388607)
- 273 named destinations out of 1000 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5548 PDF objects out of 6186 (max. 8388607)
+ 292 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

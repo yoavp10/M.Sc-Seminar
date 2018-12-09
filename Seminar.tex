@@ -176,7 +176,7 @@ Coverage "Capability" - how much a sensor can sense
 \includegraphics[scale=0.5]{motivation/coverage-radius.eps}
 \end{figure}
 
-In red - the sensor coverage \emph{Capability}. Most of the models the coverage capability as a circular area, thus coverage \emph{radius}.
+In red - the sensor coverage \emph{Capability}. Most of the models refer the coverage capability as a circular area, thus it's also known as coverage \emph{radius}.
 \end{frame}
 %%
 \begin{frame}[label=motivation4]{Partial Coverage}
@@ -588,13 +588,20 @@ Therefore, we are ready for the problem solution algorithm...
 \end{frame}
 %%% Problem simulations %%%
 \subsection[Simulations]{}
-\begin{frame}[label=sl3]{Some Simulation}
-List of simulations to create:
-\begin{itemize}
-\item 3 agents, 5 big partitions, no formation, no PLA
-\item 3 agents, 5 big partitions, no formation, PLA
-\item 10 agents, 5 big partitions, no formation, PLA
-\end{itemize}
+\begin{frame}[label=plasim1]{Simulation \#1}
+3 agents, 3 partitions, PLA deactivated.
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{sim/sim1-3agents-3partitions-noPLA.eps}
+\end{figure}
+\end{frame}
+%%
+\begin{frame}[label=plasim2]{Simulation \#2}
+3 agents, 3 partitions, PLA activated.
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{sim/sim2-3agents-3partitions-PLA.eps}
+\end{figure}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -706,11 +713,31 @@ Let us assume that there exists a (CVT) with $C_{V_{i}}$ such that $\forall i \n
 \end{frame}
 %%% Problem simulations %%%
 \subsection[Simulations]{}
-\begin{frame}[label=sl3]{Some Simulation}
-List of simulations to create:
-\begin{itemize}
-\item some simulations
-\end{itemize}
+\subsection[Simulations]{}
+\begin{frame}[label=formsim1]{Simulation \#1}
+Defined a triangular shaped formation:
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{sim/sim-formationshape.eps}
+\end{figure}
+\end{frame}
+%%
+\begin{frame}[label=plasim2]{Simulation \#2}
+3 agents, 3 partitions, PLA deactivated, with Triangular formation.
+\begin{figure}
+\centering
+\includegraphics<1>[scale=0.6]{sim/sim1-3agents-3partitions-noPLA.eps}
+\includegraphics<2>[scale=0.6]{sim/sim3-3agents-3partitions-noPLA-formation.eps}
+\end{figure}
+\end{frame}
+%%
+\begin{frame}[label=plasim3]{Simulation \#2}
+3 agents, 3 partitions, PLA activated, with Triangular formation.
+\begin{figure}
+\centering
+\includegraphics<1>[scale=0.6]{sim/sim2-3agents-3partitions-PLA.eps}
+\includegraphics<2>[scale=0.6]{sim/sim4-3agents-3partitions-PLA-formation.eps}
+\end{figure}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
