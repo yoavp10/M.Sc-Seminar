@@ -221,7 +221,7 @@ There exists a deployment with 12 sensors which can cover the area. What if we o
 \begin{figure}[b]
 \includegraphics[scale=0.5]{motivation/deployment-configuration-partial-no-enough-sensors.eps}
 \end{figure}
-There doesn't exists a configuration that can supply full coverage!
+There isn't a configuration that can provide full coverage!
 \end{frame}
 %%
 \begin{frame}[label=motivation9]{Making it a bit more interesting...}
@@ -258,7 +258,7 @@ By choosing any strategy, a \emph{coverage controller}$^3$ must be provided.
 \item Main benefit - provide coverage of a subset of an area constantly.
 \end{itemize}
 
-$[$Cortes2004$]$. provided a controller that knows how to partition an area and provide coverage, using Centroidal Voronoi Tessellations$^1$.
+$[$Cortes2004$]$ provided a controller that knows how to partition an area and provide coverage, using Centroidal Voronoi Tessellations$^1$.
 
 \begin{figure}[b]
 \includegraphics[scale=0.4]{motivation/partitioning.eps}
@@ -273,7 +273,7 @@ and Algorithms,” SIAM Review, Vol. 41, No. 4, 1999, pp. 637–676.}
 \begin{frame}[label=probformulation1]{Problem Formulation}
 \begin{itemize}
 \item There is some area $A \in \rR^{2}$ That we aim to cover.
-\item A sub-area $A_{m} \subset A$ must be covered always (e.g. ground station).
+\item A sub-area $A_{m} \subset A$ must be partially covered always (e.g. ground station).
 \item There exist a set of \textbf{mobile} sensors $S = \left\{s_1 \ldots s_n\right\}$ located in positions $p_i(t) \in \mathbb{R}^2$ (for $i=1,\ldots,n$) at time $t$.
 \begin{itemize}
 \item The mobile sensors are modelled using integrator dynamics $\dot{p_i}(t) = u$.
@@ -300,7 +300,7 @@ $D\left( c\left( t \right) \right) \subset A$ - a single configuration \emph{can
 %%
 \begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{itemize}
-\item A partition $j$ of the area $A$ is $pr_{j} \subset A$
+%\item A partition $j$ of the area $A$ is $pr_{j} \subset A$
 \item The partitioning of $A, PR\left( A \right)$, is a finite set built from $n$ partitions $pr_{1},\ldots,pr_n$:
 \begin{itemize}
 \item The partitions does not intersect one with each other,
@@ -316,9 +316,15 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \begin{problem} \label{GeneralProblem}
 \begin{enumerate}
 \item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
-\item Find a deployment controller, that for a given partition $pr_j$ and a steady state time $t_s$, $D\left( c\left( t_s \right) \right) \supseteq pr_j$
+\item Find a deployment controller, such that for a given partition $pr_j, lim_{(t\rightarrow \infty)}D(c(t)) \subseteq PR(A)$
 \end{enumerate}
 \end{problem}
+\pause
+In more simple words:
+\begin{itemize}
+\item Find partitioning such that every partition intersect with $A_m$,
+\item In some time, there is a full coverage of a partition $pr_j$, for $j=1,\ldots, n$.
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -331,7 +337,7 @@ PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j
 \subsection[Voronoi Partitioning]{}
 \begin{frame}[label=vorpart1]{Voronoi Partitioning}
 \begin{center}
-A little story about a town, a city planner and post offices...
+A short story about a postal company that wants to become more efficient...
 \end{center}
 \begin{figure}
 \centering
@@ -357,7 +363,7 @@ Circles - generators, crosses - some point inside the appropriate partition.
 %%
 \begin{frame}[label=centvorpart1]{Central Voronoi Tessellations}
 \begin{center}
-Let's get back to our city planner.
+Building a new neighbourhood!
 \begin{figure}
 \centering
 \includegraphics[scale=0.05]{background/sketch.jpg}
