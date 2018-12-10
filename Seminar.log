@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  10 DEC 2018 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.26)  10 DEC 2018 14:49
 entering extended mode
 **./Seminar.tex
 (Seminar.tex
@@ -1202,8 +1202,8 @@ Package pdftex.def Info: Figures/lapid-logo-45.pdf  used on input line 170.
 
 ]
 Package epstopdf Info: Source file: <Figures/motivation/coverage-radius.eps>
-(epstopdf)                    date: 2018-12-07 19:39:40
-(epstopdf)                    size: 21420 bytes
+(epstopdf)                    date: 2018-12-10 14:49:01
+(epstopdf)                    size: 22780 bytes
 (epstopdf)             Output file: <Figures/motivation/coverage-radius-eps-con
 verted-to.pdf>
 (epstopdf)                    date: 2018-12-07 19:39:47
@@ -1211,7 +1211,13 @@ verted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/motivation/coverage
 -radius-eps-converted-to.pdf Figures/motivation/coverage-radius.eps>
 (epstopdf)             \includegraphics on input line 180.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=Figures/motivation/coverage-radius-eps-converted-t
+o.pdf Figures/motivation/coverage-radius.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Figures/motivation/coverage-radius-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-12-10 14:49:08
+(epstopdf)                    size: 5645 bytes.
 <Figures/motivation/coverage-radius-eps-converted-to.pdf, id=543, 393.47pt x 23
 5.88126pt>
 File: Figures/motivation/coverage-radius-eps-converted-to.pdf Graphic file (typ
@@ -2422,7 +2428,7 @@ ic/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Seminar.pdf (74 pages, 8527792 bytes).
+Output written on Seminar.pdf (74 pages, 8528145 bytes).
 PDF statistics:
  5548 PDF objects out of 6186 (max. 8388607)
  292 named destinations out of 1000 (max. 500000)
