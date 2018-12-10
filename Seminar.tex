@@ -301,30 +301,33 @@ $D\left( c\left( t \right) \right) \subset A$ - a single configuration \emph{can
 \begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{itemize}
 %\item A partition $j$ of the area $A$ is $pr_{j} \subset A$
-\item The partitioning of $A, PR\left( A \right)$, is a finite set built from $n$ partitions $pr_{1},\ldots,pr_n$:
+\item The partition of $A \subset \mathbb{R}^2, PR\left( A \right)$, is a finite set built from $n$ subsets $pr_{i} \subset \mathbb{R}^2 ,\; i=1, \ldots, n$ such that:
 \begin{itemize}
-\item The partitions does not intersect one with each other,
-\item The union of the $n$ partitions is exactly the area $A$.
+\item $pr_i \cap pr_j = \emptyset \; \forall i \neq j$
+\item $\cup pr_i = A$
+%\item The partitions does not intersect one with each other,
+%\item The union of the $n$ partitions is exactly the area $A$.
 \end{itemize}
-\begin{equation*}
-PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j} = \emptyset \textbf{ and }\cup pr_{j} = A \}
-\end{equation*}
+%\begin{equation*}
+%PR\left( A \right) = \{ pr_{j} \mid \forall i \neq j,\textbf{ } pr_{i}\cap pr_{j} = \emptyset \textbf{ and }\cup pr_{j} = A \}
+%\end{equation*}
 \end{itemize}
+\begin{figure}[b]
+\includegraphics[scale=0.5]{motivation/partitioning.eps}
+\end{figure}
 \end{frame}
 %%
 \begin{frame}[label=probformulation2]{Problem Formulation}
 \begin{problem} \label{GeneralProblem}
 \begin{enumerate}
-\item Find partitioning such that for each partition $j, pr_{j} \cap A_m \neq \emptyset$ 
-\item Find a deployment controller, such that for a given partition $pr_j, lim_{(t\rightarrow \infty)}D(c(t)) \subseteq PR(A)$
+\item Find a partition $PR(A)$ such that each subset $pr_i \in PR(A), \; pr_i \cap A_m \neq \emptyset$
+\item Find a deployment controller, such that $$ pr_i \subseteq \lim_{t\rightarrow \infty}D(c(t)),\text{for }i=1,\ldots,n.$$
 \end{enumerate}
 \end{problem}
 \pause
-In more simple words:
-\begin{itemize}
-\item Find partitioning such that every partition intersect with $A_m$,
-\item In some time, there is a full coverage of a partition $pr_j$, for $j=1,\ldots, n$.
-\end{itemize}
+\begin{figure}[b]
+\includegraphics[scale=0.5]{background/problem-formulation-example.eps}
+\end{figure}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -372,7 +375,7 @@ Building a new neighbourhood!
 \end{frame}
 %%
 \begin{frame}[label=centvorpart2]{Central Voronoi Tessellations}
-Let us define a density function, $\rho_i$, for each Voronoi partition $V_{i}$. Then, we can define the center of mass for each partition as
+Let us define a density function, $\rho_i$, for each Voronoi partition $V_{i}$. Then, we can define the center of mass for each partition as:
 \begin{equation*}
 z_{i}^{*} = \frac{\int_{V_{i}}y\rho(y)dy}{\int_{V_{i}}\rho(y)dy}.
 \end{equation*}
@@ -386,14 +389,14 @@ Common examples for density function:
 \end{frame}
 %%
 \begin{frame}[label=centvorpart3]{Central Voronoi Tessellations}
-How it looks like?
+How it looks:
 \begin{center}
 \includegraphics[scale=0.5]{background/central-Voronoi-example.png}
 \end{center}
 \end{frame}
 %%
 \begin{frame}[label=lloydsalg1]{Lloyd's Algorithm}
-How do we calculate CVT?
+How to calculate CVT:
 \begin{algorithm}[H]
 \caption{Lloyd's Algorithm} \label{LloydAlgo}
 \begin{algorithmic}[1]
@@ -406,11 +409,10 @@ How do we calculate CVT?
 \end{frame}
 %%
 \begin{frame}[label=lloydsalg2]{Lloyd's Algorithm}
-So how do we calculate it?\\
 Step 1:
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{background/cvt-calc-step1.eps}
+\includegraphics[scale=0.5]{background/cvt-calc-step1.eps}
 \end{figure}
 Black - initial guess, turquoise - after first iteration
 \end{frame}
@@ -434,10 +436,10 @@ Almost converged...
 \end{frame}
 %%
 \begin{frame}[label=lloydsalg5]{Lloyd's Algorithm}
-Asymptotically convergence to CVT:
+Asymptotic convergence to CVT:
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{background/cvt-calc-stepn.eps}
+\includegraphics[scale=0.6]{background/cvt-calc-stepn.eps}
 \end{figure}
 \end{frame}
 %%
@@ -486,13 +488,12 @@ So what were we trying to do (in simple words)?
 $[$Cortes2004$]$ came up with a solution for the second issue. But what about the first one?
 \end{frame}
 %%
-\begin{frame}[label=solproposal]{Projection}
+\begin{frame}[label=solprojection]{Projection}
 A possible solution - After calculating the center of mass of each cell, \emph{project} the results onto the set $A_m$.
-\\ \pause
+%\\ \pause
 \begin{block}{Projection - Definition}
-Let $V$ be a vector space, and let $W,U \subset V$ such that $U \oplus W = V$, then for $ v \in V, u\in U, w\in W$, $v = u+w$. The \emph{Projection operator $P$ onto $U$} is the linear operator $P_{U,W}\in \mathcal{L}(V)$ defined by $P_{U,W}(v)=u$ for all $v \in V$.
+$$\textsc{proj}_{A_m}(x) = \arg\min_{y \in A_m} \norm{x-y}^2$$
 \end{block}
-We will project using Euclidean distance, and mark the projection of the scalar $a$ as $\textsc{proj}(a)$.
 \end{frame}
 %%
 \begin{frame}[label=solprojectionexample]{Projection example}
@@ -542,7 +543,7 @@ Assume that we have an area $A$ and some sub-area $A_m$:
 \begin{frame}[label=projlloydsalgotheorem]{Projected Lloyd's Algorithm}
 PLA in continuous time controller form:
 \begin{equation*} \label{ProjectedLloydsContol}
-u_{i} = -k_{p}\left( p_i - \textsc{proj}\left( C_{V_{i}} \right) \right)
+u_{i} = -k_{p}\left( p_i - \textsc{proj}_{A_m}\left( C_{V_{i}} \right) \right)
 \end{equation*} 
 
 \begin{theorem}
@@ -551,7 +552,7 @@ The projected Lloyd's Algorithm is locally asymptotically stable
 
 Proof of stability is using the direct Lyapunov method, with a potential function being very similar to the one proposed in [Cortes2004]:
 \begin{equation*}
-\mathcal{H_{V}}\left( P \right) = \sum_{i=1}^{n} J_{V_i,C_{V_i}} + \sum_{i=1}^{n} M_{V_i} \norm{p_i - \textsc{proj}\left( C_{V_i}\right)}^2
+\mathcal{H_{V}}\left( P \right) = \sum_{i=1}^{n} J_{V_i,C_{V_i}} + \sum_{i=1}^{n} M_{V_i} \norm{p_i - \textsc{proj}_{A_m}\left( C_{V_i}\right)}^2
 \end{equation*}
 \end{frame}
 
@@ -723,7 +724,7 @@ Defined a triangular shaped formation:
 \end{frame}
 %%
 \begin{frame}[label=plasim2]{Simulation \#2}
-3 agents, 3 partitions, PLA deactivated, with Triangular formation.
+3 agents, 3 partitions, PLA deactivated, with Triangular formation, $\alpha = 0.5$.
 \begin{figure}
 \centering
 \includegraphics<1>[scale=0.6]{sim/sim1-3agents-3partitions-noPLA.eps}
@@ -732,7 +733,7 @@ Defined a triangular shaped formation:
 \end{frame}
 %%
 \begin{frame}[label=plasim3]{Simulation \#2}
-3 agents, 3 partitions, PLA activated, with Triangular formation.
+3 agents, 3 partitions, PLA activated, with Triangular formation, $\alpha = 0.5$.
 \begin{figure}
 \centering
 \includegraphics<1>[scale=0.6]{sim/sim2-3agents-3partitions-PLA.eps}
